@@ -1,0 +1,7 @@
+1.make build
+2.make start_migrate
+3.make create_user
+
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
