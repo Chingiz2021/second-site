@@ -11,15 +11,14 @@ from .models import  Orders
 def create_orders(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        try:
-            order = Orders.objects.create(
+        
+        order = Orders.objects.create(
                 name = data['name'],
                 phone = data['phone'],
                 email = data['email']
                 )
-            return JsonResponse({'message': True})
-        except:
-            return JsonResponse({'message': False})
+        return JsonResponse({'message': True})
+
     if request.method == 'GET':
         return JsonResponse({'message': 'ok'})
 

@@ -19,20 +19,17 @@
     {% endblock %}
   </head>
   <body class="">
-    <header
-      id="header"
-      class="d-flex align-items-center justify-content-center"
-    >
-      <div class="container text-center"></div>
-    </header>
+    {% include 'includes/nav.html' %}
 
-    <div id="content">
+
+    
       {% block content %}{% endblock %}
-    </div>
+   
 
-    <footer id="footer" class="py-4">
-      <div class="container text-center">
-        &copy; {% now 'Y' %} Second &ndash; магазин товаров
+    <footer id="footer" class="py-4" style="background: #23164b;
+    color: white;">
+      <div class="container text-end">
+        <span style="cursor: pointer;">Оферта</span>    <span style="margin-left: 3em;cursor: pointer;">Хочу в команду</span>
       </div>
     </footer>
 
@@ -42,6 +39,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    
+    <script src="{% static 'js/index.js' %}"></script>
     {% endblock %}
   </body>
 </html>
