@@ -1,5 +1,4 @@
 1.make build
-2.make start_migrate
 3.make create_user
 docker-compose run appdjango python manage.py createsuperuser
 
