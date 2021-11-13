@@ -7,10 +7,95 @@ body {
 #sort{
    background: #a9ab49;;
 }
+.img-h{
+    position: absolute;
+    max-width: 25em;
+    
+    top: -2em;
+    right: 0;
+}
+.img-ser{
+    position: absolute;
+    max-width: 100%;
+    width:25em;
+    top: -2em;
+    left: 0;
+}
+.onetext{
+    position: absolute;
+    top: 5%;
+    width: 10em;
+    right: -1em;
+    color: #23164B;
+    font-size: 1em;
+    color: #23164B;
+    font-weight: 500;
+}
+.oot2{
+    position: absolute;
+    color: #23164B;
+    bottom: 0;
+    width: 10em;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.other1{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/oth1.png");
+    min-height: 70vh;
+}
+.other2{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/oth2.png");
+    min-height: 70vh;
+}
+.oth2{
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top: -7em;
+}
+.oth1{
+    position: absolute;
+    max-height: 120vh;
+    left: 8em;
+    
+}
 .box-cont{
     
 
  
+}
+.text{
+    font-weight: 500;
+    position: relative;
+}
+.prin{
+    left: 4em;
+    position: absolute;
+    width: 20em;
+    bottom: -5em;
+}
+.neprin{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.other{
+    width: 80rem;
+    position: absolute;
+    top: -10em;
+    right: 0;
+}
+.img-h1{
+    position: absolute;
+    max-width: 25em;
+    top: -2em;right: 0;
 }
 .img-cont{
     position: relative;
@@ -46,14 +131,53 @@ body {
     position: absolute;
     top: 1em;
 }
+.text-other{
+    width: 14em;
+    margin-top: 5em;
+    font-size: 1.4em;
+    text-align: initial;
+    width: 30%;
+    text-align: center;
+}
+.text-other2{
+    width: 14em;
+    margin-top: 5em;
+    font-size: 1.4em;
+    text-align: initial;
+    width: 30%;
+    text-align: end;
+}
 
 
 @media (max-width:990px) {
-
-    .hh1{
-        width: 100%;
+    .img-h{
+        position: absolute;
+        max-width: 25em;
+        width: 12em;
+        top: -2em;
+        right: 0;
+    }
+    .img-h1{
+       top: 0;
     }
     .box-form{
+        margin-top: 4em;
+
+    }
+    #other{
+
+    }
+
+    .other{
+        top: 0;
+    }
+    .hh1{
+        width: 100%;
+        margin-top: 5em;
+    }
+    .box-form{
+        margin-top: 4em;
+        position: relative;
         display: flex;
         justify-content: center;
       
@@ -68,7 +192,43 @@ body {
     }
 
 }
-@media (max-width:500px){
+@media (max-width:600px){
+    .img-h{
+        position: absolute;
+        width: 12em;
+        top: 2em;
+        right: 0;
+    }
+    .onetext{
+        right: 2em;
+    }
+    .oot2{
+        left: 1em;
+        font-size: 1em;
+    }
+    .prin{
+        top: 0;
+    }
+    .other{
+        top: 0;
+    }
+    .text-other{
+        width: 70%;
+        font-size: 1em;
+      
+    }
+
+    .text-other2{
+       width: 70%;
+        font-size: 1em;
+        margin-left: 3em;
+        margin-top: 12rem;
+       
+    }
+    .neprin{
+        width: 16em;
+        right: 0;
+    }
     .w-1{
         right: -1em;
     }
@@ -79,6 +239,16 @@ body {
       
     }
 }
-
+@media (max-width:800px) {
+    .oot2{
+        position: absolute;
+        color: #23164B;
+        bottom: -4em;
+        left: 2em;
+        width: 10em;
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+}
 
 

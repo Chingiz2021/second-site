@@ -3,8 +3,7 @@
 {% block body_classes %}{% spaceless %}
 homepage
 {% endspaceless %}{% endblock %}
-
-{% block content %}
+{% block header %}
 <header id="header" class="d-flex align-items-center justify-content-center">
     <div class="container d-flex" style="align-items: center;min-height: 80vh;">
         <div class="row">
@@ -28,7 +27,7 @@ homepage
                                 <input required type="text" class="form-control name" placeholder="Имя">
                             </div>
                             <div class="mb-3">
-                                <input type="text" required class="form-control phone" placeholder="Номер телефона">
+                                <input id="phone" type="text" required class="form-control phone" placeholder="Номер телефона">
                             </div>
                             <div class="mb-3">
                                 <input required type="email" class="form-control email" placeholder="Email" id="exampleInputEmail1">
@@ -44,7 +43,7 @@ homepage
             <div class="col-12 col-lg-8 order-1 order-lg-2">
                 <div class="container left" style="font-weight: 500;position: relative;">
                     {% load static %}
-                    <img style="position: absolute;max-width: 25em;top: -2em;right: 0;" class="img-fluid" src="{% static 'images/h1.png' %}" alt="">
+                    <img class="img-h img-fluid" src="{% static 'images/h1.png' %}" alt="">
                     <h1 class="hh1" style="position: relative;">Бесплатный сервис по вывозу ненужных вещей
                     </h1>
                     <p style="margin-top: 92px;font-size: 1.5em;position: relative;" class="text-left hh1">
@@ -56,6 +55,9 @@ homepage
         </div>
     </div>
 </header>
+{% endblock %}
+{% block content %}
+
 <main id="main">
     <section id="o-services" style="color:white;background-color: #EB5534;">
 
@@ -65,7 +67,7 @@ homepage
                 </h2>
                 <div class="col-12 " style="padding-top: 3em;position: relative;">
                     {% load static %}
-                    <img style="position: absolute;max-width: 25em;top: -2em;" class="img-fluid" src="{% static 'images/serv.png' %}" alt="">
+                    <img  class="img-ser img-fluid" src="{% static 'images/serv.png' %}" alt="">
                     <p style="text-align: inherit;position: relative;">
                         В современном мире остро стоит проблема отношения человека к экологии. Second - позволит узнать
                         об
@@ -157,25 +159,44 @@ homepage
             </div>
         </div>
     </section>
-    <section id="priem">
-        <div class="container d-flex flex-wrap" style="align-items: center;min-height: 80vh;justify-content: center;">
+    <section id="priem" style="color: #23164B;">
+        <div class="container d-flex flex-wrap" style="align-items: center;min-height: 80vh;justify-content: center;position: relative;">
 
-
+            {% load static %}
+            <img class="img-fluid neprin d-none d-lg-block" src="{% static 'images/neprim.png' %}" alt="">
             <h2 class="text-center h2h">Мы принимаем
             </h2>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-12 " style="padding-top: 3em;">
-
+                    <div class="col-6 text-center" style="padding-top: 3em;position: relative;">
+                        {% load static %}
+                        <img class="img-fluid prin" src="{% static 'images/prin.png' %}" alt="">
+                        <p class="text">1. Одежду</p>
+                        <p class="text">2. Обувь</p>
+                        <p class="text">3. Посуду</p>
+                        <p class="text">4. Аксессуары</p>
+                        <p class="text">5. Бытовую <br> технику</p>
+                    </div>
+                    <div class="col-6 " style="padding-top: 3em;">
+                        <p class="text">6. Мебель</p>
+                         <p class="text">7. Книги</p>
+                         <p class="text">8. Запасные части</p>
+                         <p class="text">9. Домашние принадлежности</p>
+                         <p class="text">10. Прочие вещи</p>
                     </div>
                 </div>
             </div>
-            <h2 class="text-center h2h">Мы не принимаем
+            <h2 class="text-center h2h" style="margin-top: 3em;position: relative;">Мы не принимаем
             </h2>
-            <div class="container">
+            <div class="container" style="padding-bottom: 3em;">
                 <div class="row justify-content-center">
-                    <div class="col-12 " style="padding-top: 3em;">
-
+                    <div class="col-6 text-center" style="padding-top: 3em;">
+                        <p class="text">1.Нижнее белье</p>
+                        <p class="text">2. Обувь и одежду в плохом состоянии</p>
+                    </div>
+                    <div class="col-6 " style="padding-top: 3em;">
+                        <p class="text">3. Носки, колготки</p>
+                         <p class="text">4. Вещи с пятнами, плесенью и плохим запахом</p>
                     </div>
                 </div>
             </div>
@@ -202,10 +223,21 @@ homepage
             </div>
         </div>
     </section>
-<section id="other">
-    <div class="container d-flex " style="align-items: center;min-height: 80vh;">
-        <div class="row justify-content-center">
-            <h2 class="text-center">Остальное
+<section id="other" style="position: relative;margin-bottom: 4em;margin-top: 4em;
+">
+
+    <div class="container ">
+        <div class="row justify-content-center" >
+            <div  class="col-12 col-lg-6 other1" style="position: relative;">
+                <p class="onetext" >
+                    Пользуясь нашим сервисом, вы поддерживаете нашу веру в частную инициативу и социальное предпринимательство
+                </p>
+            </div>
+            <div  class="col-12 col-lg-6 other2" tyle="position: relative;">
+                <p class="oot2" >
+                    Мы мечтаем о мире, где царит баланс между потреблением и заботой об экологии и личными потребностями
+                </p>
+            </div>
             </h2>
         </div>
     </div>
