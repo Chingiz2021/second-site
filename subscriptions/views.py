@@ -20,6 +20,7 @@ def create_orders(request):
                 phone = data['phone'],
                 email = data['email']
                 )
+        print(1111111111111111111111)
         send_mail('Subject', 'Заявка принята','second@2nd.kz' , [data['email']])
         return JsonResponse({'message': True})
 
