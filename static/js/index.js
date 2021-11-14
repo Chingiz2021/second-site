@@ -15,7 +15,12 @@ form.onsubmit = async function(e) {
             "phone": phone.value,
             "email": email.value
          }
-        
+         let succes = document.querySelector('.order-alert')
+         succes.classList.add('succes-al')
+         setTimeout(() => {
+             
+        succes.classList.remove('succes-al')
+         }, 2000);
          fetch('/orders/', {
             method: 'POST',
             headers: {
@@ -27,12 +32,7 @@ form.onsubmit = async function(e) {
             return responce.json();
           }).then(function (data) {
             if(data.message){
-            let succes = document.querySelector('.order-alert')
-            succes.classList.add('succes-al')
-            setTimeout(() => {
-                
-           succes.classList.remove('succes-al')
-            }, 2000);
+
             name.value = ''
             phone.value = ''
             email.value = ''
