@@ -168,14 +168,19 @@ homepage
             </h2>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-6 text-center" style="padding-top: 3em;position: relative;">
+                    <div class="col-6 text-center" style="padding-top: 3em;position: relative;display: flex;
+                    justify-content: end;">
+                      <div style="width: 60%;text-align: left;display: flex;
+                      flex-wrap: wrap;
+                      justify-content: end;">
                         {% load static %}
                         <img class="img-fluid prin" src="{% static 'images/prin.png' %}" alt="">
-                        <p class="text">1. Одежду</p>
-                        <p class="text">2. Обувь</p>
-                        <p class="text">3. Посуду</p>
-                        <p class="text">4. Аксессуары</p>
-                        <p class="text">5. Бытовую <br> технику</p>
+                        <p class="text" style="width: 100%;">1. Одежду</p>
+                        <p class="text" style="width: 100%;">2. Обувь</p>
+                        <p class="text" style="width: 100%;">3. Посуду</p>
+                        <p class="text" style="width: 100%;">4. Аксессуары</p>
+                        <p class="text" style="width: 100%;">5. Бытовую <br> технику</p>
+                    </div>
                     </div>
                     <div class="col-6 " style="padding-top: 3em;">
                         <p class="text">6. Мебель</p>
@@ -190,9 +195,14 @@ homepage
             </h2>
             <div class="container" style="padding-bottom: 3em;">
                 <div class="row justify-content-center">
-                    <div class="col-6 text-center" style="padding-top: 3em;">
-                        <p class="text">1.Нижнее белье</p>
-                        <p class="text">2. Обувь и одежду в плохом состоянии</p>
+                    <div class="col-6 text-center" style="padding-top: 3em;display: flex;
+                    justify-content: end;">
+                        <div style="width: 60%;text-align: left;display: flex;
+                        flex-wrap: wrap;
+                        justify-content: end;">
+                        <p class="text" style="width: 100%;">1.Нижнее белье</p>
+                        <p class="text" style="width: 100%;">2. Обувь и одежду в плохом состоянии</p>
+                    </div>
                     </div>
                     <div class="col-6 " style="padding-top: 3em;">
                         <p class="text">3. Носки, колготки</p>
@@ -203,7 +213,7 @@ homepage
         </div>
     </section>
 
-    <section id="sort">
+    <section id="sorts">
         <div class="d-flex flex-wrap bd-highlight">
 
             <div id="box2" style="background-color: #EB5534;margin: 0;padding: 0;min-height: 60vh;"
@@ -284,36 +294,37 @@ homepage
              <div>
             <div class="box-cont" style="padding: 1em;position: relative;">
                 {% load static %}
-                <img   class="img-fluid img-cont" src="{% static 'images/cont.png' %}" alt="">
-                <h4 class="text-center" style=" 
-                position: absolute;
-                top: 4em;
-                color: #23164B;
-                left: 6em;">Контакты</h4>
+                <img   class="img-fluid " src="{% static 'images/cont.png' %}" alt="">
+                <div class="cont-abs" style="position: absolute;
+                top: 5em;color:#23164B">
+                <h4  style="
+              
+                width: 100%;
+               
+                text-align: center;">Контакты</h4>
+     
                 <h5 class="text-center" style=" 
-                position: absolute;
-                top: 7em;
-                color: #23164B;
-                left: 6em;">
+           
+                width: 100%;
+            
+                text-align: center;">
                  <a  href="tel:+77475232269" style="text-decoration: none; color: #23164B;"
                  >
                  {% load static %}
                  <img class="img-fluid" src="{% static 'images/phone.png' %}" alt=""> +7 747 523 22 69
                  </a>
                 </h5>
-                </h4>
-                <p class="text-center" style=" 
-                position: absolute;
-                top: 10em;
-                color: #23164B;
-                left: 0;padding: 2em;">
+               
+                <p class="text-center otv" >
                     Мы быстро ответим на все вопросы по телефону или WhatsApp
                 </p>
                 <p style=" 
-                position: absolute;
-                top: 15em;
-                color: #23164B;
-                left: 4em;padding: 2em;">
+ 
+                padding: 1em;
+                font-size: .8em;
+                width: 100%;
+              
+                text-align: center;">
                 <a style="text-decoration: none" href="https://wa.me/77475232269/" target="blank">
                     <button class="btn" style="background-color: #23164B;color: white;">
                         <img class="img-fluid" src="{% static 'images/wath.png' %}" alt="">
@@ -323,14 +334,15 @@ homepage
                 </a>
                 </p>
                 <p style=" 
-                position: absolute;
-                top: 20em;
-                color: #23164B;
-                left: 4em;padding: 2em;">
+                font-size: .8em;
+                width: 100%;
+              
+                text-align: center;">
  {% load static %}
  <img class="img-fluid" src="{% static 'images/geo.png' %}" alt="">
  <span> Казахстан, г. Алматы</span>
                 </p>
+            </div>
             </div>
         </div>
          </div>
