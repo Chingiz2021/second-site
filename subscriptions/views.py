@@ -5,6 +5,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.generic import TemplateView
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import  Orders
 
@@ -18,6 +20,7 @@ def create_orders(request):
                 phone = data['phone'],
                 email = data['email']
                 )
+        send_mail('Subject', 'Заявка принята','second@2nd.kz' , [data['email']])
         return JsonResponse({'message': True})
 
     if request.method == 'GET':
