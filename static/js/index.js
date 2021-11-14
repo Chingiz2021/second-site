@@ -52,12 +52,23 @@ var maskOptions = {
     lazy: false
 } 
 var mask = new IMask(element, maskOptions);
+if(document.documentElement.clientWidth < 990){
+  const navLinks = document.querySelectorAll('.nav-item')
+  const menuToggle = document.getElementById('navbarSupportedContent')
+  const bsCollapse = new bootstrap.Collapse(menuToggle, {
+    toggle: false
+  })
+  navLinks.forEach((l) => {
+      l.addEventListener('click', () => { bsCollapse.toggle() })
+  })
+}
 
-const navLinks = document.querySelectorAll('.nav-item')
-const menuToggle = document.getElementById('navbarSupportedContent')
-const bsCollapse = new bootstrap.Collapse(menuToggle, {
-  toggle: false
-})
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => { bsCollapse.toggle() })
-})
+
+let links = document.querySelectorAll('.nav-link');
+for(let i=0; i<links.length; i++){
+  links[i].addEventListener('click', function() {
+    for(let j=0; j<links.length; j++)
+      links[j].classList.remove('active');
+    this.classList.add('active');
+  });
+}
