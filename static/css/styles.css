@@ -7,6 +7,9 @@ body {
 #sort{
    background: #a9ab49;;
 }
+.bb{
+    width: 60%
+}
 .img-h{
     position: absolute;
     max-width: 25em;
@@ -202,6 +205,9 @@ body {
 
 }
 @media (max-width:600px){
+    .bb{
+        width: 100%
+    }
     .otv{
         padding-left: 4em;
                    padding-right: 4em;
