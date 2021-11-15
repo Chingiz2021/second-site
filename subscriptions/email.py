@@ -51,7 +51,7 @@ def send_admin_email(name, phone, email):
         </style>
     </head>
     <body>
-        <div class="header">
+        <div class="header" style="background-color: #23164B;">
             <img src="https://2nd.kz/static/images/logo1.png" alt="">
         </div>
         <div class="text-email">
