@@ -21,7 +21,7 @@ from .email import send_admin_email, send_client_email
 
 def send_message_mail(email,message):
     msg = MIMEMultipart('alternative')
-    msg['Subject'] = "Оформление заказа"
+    msg['Subject'] = "Новая заявка"
     msg['From'] = 'second@2nd.kz'
     msg['To'] = email
     part2 = MIMEText(message, 'html')
