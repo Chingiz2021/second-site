@@ -17,6 +17,7 @@ from django.core.mail import BadHeaderError, send_mail
 from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import  Orders
+from .email import send_admin_email, send_client_email
 
 def send_message_mail(email,message):
     msg = MIMEMultipart('alternative')
@@ -42,8 +43,11 @@ def create_orders(request):
                 phone = data['phone'],
                 email = data['email']
                 )
-        send_message_mail(data['email'],'Заявка успешно принята')
-        send_message_mail('second@2nd.kz','Новая заявка на сайте')
+        html_admin = send_admin_email(data['name'], data['phone'], data['email'])
+        html_client = send_client_email(data['name'], data['phone'], data['email'])
+        send_message_mail(data['email'],html_client)
+        send_message_mail('second@2nd.kz',html_admin)
+        
         return JsonResponse({'message': True})
 
     if request.method == 'GET':
