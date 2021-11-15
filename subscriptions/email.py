@@ -1,4 +1,7 @@
-style = """
+
+
+def send_admin_email(name, phone, email):
+    style = """
     <style>
         .header{
             max-width: 100%;
@@ -37,8 +40,6 @@ style = """
         }
     </style>
     """
-
-def send_admin_email(name, phone, email):
     html = '''\
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -75,6 +76,45 @@ def send_admin_email(name, phone, email):
     return html
 
 def send_client_email(name, phone, email):
+    style = """
+    <style>
+        .header{
+            max-width: 100%;
+            min-height: 20vh;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header img{
+            max-width: 100%;
+        }
+        .text-email{
+            min-height: 60vh;
+            max-width: 100%;
+            padding: 1em;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .detail{
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+  
+        h3{
+            
+        }
+        .text-detail{
+        
+        
+        }
+        span{
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+    """
     html = '''\
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
