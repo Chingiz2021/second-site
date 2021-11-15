@@ -8,13 +8,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from django.shortcuts import render, redirect
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.generic import TemplateView
-from django.core.mail import BadHeaderError, send_mail
-from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import  Orders
 from .email import send_admin_email, send_client_email
