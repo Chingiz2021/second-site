@@ -7,6 +7,9 @@ body {
 #sort{
    background: #a9ab49;;
 }
+.tts{
+    width: 60%;
+}
 .mess{
     display: none;
 }
@@ -187,6 +190,9 @@ body {
 
 
 @media (max-width:990px) {
+    .tts{
+        width: 100%;
+    }
     .ww{
         width: 100%
     }
@@ -293,11 +299,14 @@ body {
 @media (max-width:800px) {
     .oot2{
         position: absolute;
-        color: #23164B;
+        width: 100%;
+       
         bottom: -4em;
+        padding: 2em;
         left: 2em;
-        width: 10em;
-        font-size: 1.3em;
+        left: 0;
+      
+        font-size: 1.5em;
         font-weight: 500;
     }
 }
