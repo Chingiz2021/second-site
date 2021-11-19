@@ -21,4 +21,4 @@ class OrdersAdmin(admin.ModelAdmin):
     search_fields = ('email', 'phone')
     ordering = ('-created',)
     readonly_fields = ['created']
-    fields = ('email', 'phone', 'name', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
+    fields = ('email', 'phone', 'name','type', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)

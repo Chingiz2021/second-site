@@ -38,9 +38,10 @@ def create_orders(request):
         order = Orders.objects.create(
                 name = data['name'],
                 phone = data['phone'],
-                email = data['email']
+                email = data['email'],
+                type = data['type']
                 )
-        html_admin = send_admin_email(data['name'], data['phone'], data['email'])
+        html_admin = send_admin_email(data['name'], data['phone'], data['email'], data['type'])
         html_client = send_client_email(data['name'], data['phone'], data['email'])
         send_message_mail(data['email'],html_client)
         send_message_mail('second@2nd.kz',html_admin)

@@ -1,6 +1,6 @@
 
 
-def send_admin_email(name, phone, email):
+def send_admin_email(name, phone, email,types):
     style = """
     <style>
         .header{
@@ -64,6 +64,7 @@ def send_admin_email(name, phone, email):
                 <p><span>Имя клиента: </span> {name}</p>
                 <p><span>Телефон клиента: </span> {phone}</p>
                 <p><span>Email клиента: </span> {email}</p>
+                <p><span>Тип вещей: </span> {types}</p>
                 
             </div>
             <div>

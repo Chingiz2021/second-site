@@ -8,6 +8,7 @@ class Orders(models.Model):
     name = models.CharField('Имя клиента', max_length=255)
     phone = models.CharField('Номер телефона клиента', max_length=255, null=True)
     email = models.CharField('Email клиента', max_length=255, null=True)
+    type = models.TextField('Указан тип вещей', max_length=1000, null=True, help_text='тип вещей указынный клиентом')
     prosmotr = models.BooleanField('Заявка просмотрена ', default=False, help_text='просмотрена ли заявка?')
     obrabotka = models.BooleanField('Заявка обработана ', default=False, help_text='обработана  ли заявка?')
     obrabotka_scklad = models.BooleanField('Уже на складе', default=False, help_text='Вещи по заявке на складе?')
