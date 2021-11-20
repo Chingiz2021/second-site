@@ -7,6 +7,9 @@ body {
 #sort{
    background: #a9ab49;;
 }
+#about{
+    background-color: #A9AB49;
+}
 .sotrm{
     display: none;
 }
@@ -327,6 +330,9 @@ body {
 
 }
 @media (max-width:600px){
+    #about{
+        background-color: white;
+    }
     .bb{
         width: 100%
     }
