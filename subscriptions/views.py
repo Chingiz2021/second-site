@@ -1,3 +1,4 @@
+from email import message
 import os
 import json
 import smtplib
@@ -13,8 +14,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.generic import TemplateView
 
-from .models import  Orders
-from .email import send_admin_email, send_client_email
+from .models import  Orders, Works
+from .email import send_admin_email, send_client_email, send_admin_email_sotr
 
 def send_message_mail(email,message):
     msg = MIMEMultipart('alternative')
@@ -50,6 +51,29 @@ def create_orders(request):
 
     if request.method == 'GET':
         return JsonResponse({'message': 'ok'})
+
+
+@csrf_exempt 
+def create_orders_sotrud(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        if not  data['message']:
+            message = 'не указано'
+        else:
+            message = data['message']
+        order = Works.objects.create(
+                name = data['name'],
+                phone = data['phone'],
+                email = data['email'],
+                message = message ,
+                )
+        html_admin = send_admin_email_sotr(data['name'], data['phone'], data['email'], message)
+        html_client = send_client_email(data['name'], data['phone'], data['email'])
+        send_message_mail(data['email'],html_client)
+        send_message_mail('second@2nd.kz',html_admin)
+        
+        return JsonResponse({'message': True})
+
 
 def home_page(request):
     return render(request, 'index.html')

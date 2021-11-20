@@ -24,3 +24,22 @@ class Orders(models.Model):
         
         verbose_name = 'Заявку'
         verbose_name_plural = 'Заявки'
+
+
+class Works(models.Model):
+    name = models.CharField('Имя клиента', max_length=255)
+    phone = models.CharField('Номер телефона клиента', max_length=255, null=True)
+    email = models.CharField('Email клиента', max_length=255, null=True)
+    message = models.TextField('сообщение от клиента', max_length=1000, null=True, help_text='сообщение от клиента')
+    prosmotr = models.BooleanField('Заявка просмотрена ', default=False, help_text='просмотрена ли заявка?')
+    created = models.DateTimeField('Дата создания заявки',auto_now=True, auto_now_add=False)
+    
+    def __str__(self):
+        return self.email
+
+
+
+    class Meta:
+        
+        verbose_name = 'Заявку на сотрудничество'
+        verbose_name_plural = 'Заявки на сотрудничество'

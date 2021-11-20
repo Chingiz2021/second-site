@@ -7,6 +7,52 @@ body {
 #sort{
    background: #a9ab49;;
 }
+.sotrm{
+    display: none;
+}
+.sorm2{
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    padding: 2em;
+}
+.text-flicker {
+    animation: flicker 2s linear infinite; /* Параметры анимации */
+  }
+    @keyframes flicker {
+      from { opacity: 1; /* Непрозрачный текст */ }
+      to { opacity: .3; /* Прозрачный текст */ }
+    }
+#other{
+    min-height: 70vh;
+}
+.hh4{
+    color:white;text-align: inherit;width: 13em;
+}
+
+.p1{
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    font-size: 1.4em;color: #23164B;font-weight: 500;
+}
+.p2{
+    font-size: 1.4em;font-weight: 500;
+    width: 40%;
+    position: absolute;
+    bottom: 10%;
+    color: #23164B;
+    
+}
+.onet{
+    width: 40%;
+}
+.onet2{
+    width: 40%;
+}
+
 .tts{
     width: 60%;
 }
@@ -32,7 +78,8 @@ body {
     margin-top: 3em;
 }
 .bb{
-    width: 60%
+    width: 60%;
+    
 }
 .doxod{
     margin-top: 92px;
@@ -187,9 +234,42 @@ body {
     width: 30%;
     text-align: end;
 }
-
-
+#box2{
+    background-color: #A9AB49;
+    margin: 0;
+    padding: 0;
+    
+}
+@media (max-width:1350px) {
+    .p1{
+        font-size: 1.1em;
+        
+    }
+    .p2{
+        font-size: 1.1em;
+        
+    }
+}
+@media (max-width:1130px) {
+    .p1{
+        font-size: 1.1em;
+        top: 10%;
+        
+    }
+    .p2{
+        font-size: 1.1em;
+        
+    }
+}
 @media (max-width:990px) {
+    #box2{
+        min-height: 60vh;
+        
+    }
+    .hh4{
+        width: 18em;
+        text-align: center;
+    }
     .tts{
         width: 100%;
     }
@@ -239,6 +319,10 @@ body {
     }
     .box-about{
         width: 100%;
+    }
+    .bb{
+        justify-content: center;
+        
     }
 
 }

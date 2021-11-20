@@ -320,9 +320,28 @@ form3.onsubmit = async function(e) {
       "name": name.value,
       "phone": phone.value,
       "email": email.value,
-      "message ":message .value
+      "message":message.value
    }
-   console.log(data);
+   let succes = document.querySelector('.sotrm')
+ succes.classList.add('sorm2')
+ setTimeout(() => {
+  succes.classList.remove('sorm2')
+ }, 2000);
+   fetch('/sotrudnichestvo', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(function (responce) {
+    return responce.json();
+  }).then(function (data) {
+    name.value = ''
+    phone.value = ''
+    email.value = ''
+    message.value = ''
+  })
     
   }
   else{

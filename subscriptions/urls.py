@@ -5,6 +5,7 @@ from .views import (
                    home_page,
                    page_oferta,
                    page_sotrudnicestfo,
+                   create_orders_sotrud,
                    RobotsTxtView,
                    SitemapXmlView,
                    )
@@ -17,9 +18,9 @@ urlpatterns = [
     path('orders/', include(([
         path('', create_orders, name='create'),
     ], 'orders'), namespace='orders')),
+    path('sotrudnichestvo', create_orders_sotrud, name='sotr'),
     path('', home_page, name='home_page'),
     path('oferta', page_oferta, name='oferta'),
-    path('sotrudnicestfo',  page_sotrudnicestfo, name='sotrudnicestfo'),
     path('robots.txt', RobotsTxtView.as_view()),
     path('sitemap.xml', SitemapXmlView.as_view()),
 ]

@@ -216,19 +216,19 @@ homepage
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" style="background-color: #A9AB49;">
         <div class="d-flex flex-wrap bd-highlight">
             <div style="margin: 0;padding: 0;" class="flex-grow-1 bd-highlight box-about">
                 {% load static %}
                 <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sectionabout.png' %}" alt="">
             </div>
-            <div id="box2" style="background-color: #A9AB49;margin: 0;padding: 0;min-height: 60vh;"
+            <div id="box2" 
                 class="flex-grow-1 bd-highlight box-about ">
                 <div style="height: 100%; display: flex;align-items: center;justify-content: center;">
 
 
 
-                    <h4 style="color:white;text-align: inherit;width: 13em;">
+                    <h4 class="hh4">
                         Мы приедем и заберем любые ненужные вещи из квартиры, гаража или офиса.
                     </h4>
                 </div>
@@ -273,12 +273,18 @@ homepage
                 <div class="row justify-content-center">
                     <div class="col-6 text-center" style="padding-top: 3em;display: flex;
                     justify-content: end;">
-                        <div class="bb" style="text-align: left;display: flex;
-                        flex-wrap: wrap;
-                        justify-content: end;">
+                        <div  class="bb d-lg-block d-md-none d-none" style="text-align: left;display: flex;
+                        flex-wrap: wrap;justify-content: end;
+                        ">
                         <p class="text" style="width: 100%;">1.Нижнее белье</p>
                         <p class="text" style="width: 100%;">2. Обувь и одежду в плохом состоянии</p>
                     </div>
+                    <div  class="d-lg-none d-md-block d-block" style="text-align: left;display: flex;
+                    flex-wrap: wrap;justify-content: start;
+                    ">
+                    <p class="text" style="width: 100%;">1.Нижнее белье</p>
+                    <p class="text" style="width: 100%;">2. Обувь и одежду в плохом состоянии</p>
+                </div>
                     </div>
                     <div class="col-6 " style="padding-top: 3em;">
                         <p class="text">3. Носки, колготки</p>
@@ -289,7 +295,7 @@ homepage
         </div>
     </section>
 
-    <section id="sorts">
+    <section id="sorts" style="background: #eb5534">
         <div class="d-flex flex-wrap bd-highlight">
 
             <div id="box2" style="background-color: #EB5534;margin: 0;padding: 0;min-height: 60vh;"
@@ -299,34 +305,71 @@ homepage
 
 
                     <h4 style="color:white;text-align: inherit;width: 13em;">
-                        Мы отсортируем, приведем в рабочее состояние, затем подарим вторую жизнь вещам.
+                        Мы отсортируем, приведем в рабочее состояние,  затем <br> <span style="color:#23164B">подарим вторую жизнь вещам.</span> 
                     </h4>
                 </div>
             </div>
-            <div style="margin: 0;padding: 0;" class="flex-grow-1 bd-highlight box-about">
+            <div style="margin: 0;padding: 0;background: #eb5534;display: flex;
+            align-items: center;
+    justify-content: center;" class="flex-grow-1 bd-highlight box-about" >
                 {% load static %}
                 <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sort.png' %}" alt="">
             </div>
         </div>
     </section>
-<section id="other" style="position: relative;margin-bottom: 4em;margin-top: 4em;
-">
+<section id="other" class="d-lg-block d-md-none d-none" style="position: relative;padding: 1em;">
+    <div class="row">
+<div class="col-12 col-lg-6" style="min-height: 70vh;position: relative;">
+    <p class="p1">
+        Пользуясь нашим сервисом, вы поддерживаете нашу веру в частную инициативу и социальное предпринимательство
+    </p>
+    {% load static %}
+    <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g0.png' %}" alt="">
+</div>
+    
 
-    <div class="container ">
-        <div class="row justify-content-center" >
-            <div  class="col-12 col-lg-6 other1" style="position: relative;">
-                <p class="onetext" >
-                    Пользуясь нашим сервисом, вы поддерживаете нашу веру в частную инициативу и социальное предпринимательство
-                </p>
-            </div>
-            <div  class="col-12 col-lg-6 other2" tyle="position: relative;">
-                <p class="oot2" >
-                    Мы мечтаем о мире, где царит баланс между потреблением и заботой об экологии и личными потребностями
-                </p>
-            </div>
-            </h2>
+<div class="col-12 col-lg-6" style="min-height: 70vh;position: relative;">
+   
+  
+    <p class="p2">
+
+        Мы мечтаем о мире, где царит баланс между потреблением и заботой об экологии и личными потребностями
+    </p>
+    {% load static %}
+    <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g1.png' %}" alt="">
+</div>
+</div>
+</section>
+<section id="other2" class="d-lg-none d-md-block d-block">
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <p style="color: #23164B;
+            text-align: center;
+            font-size: 1.4em;
+            margin-top: 3em;font-weight: 500;">
+                Пользуясь нашим сервисом, вы поддерживаете нашу веру в частную инициативу и социальное предпринимательство
+            </p>
+        </div>
+        <div class="col-12 col-md-12">
+            {% load static %}
+            <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g0.png' %}" alt="">
+        </div>
+        <div class="col-12 col-md-12">
+            <p style="color: #23164B;
+            text-align: center;
+            font-size: 1.4em;
+            margin-top: 3em;font-weight: 500;">
+
+                Мы мечтаем о мире, где царит баланс между потреблением и заботой об экологии и личными потребностями
+            </p>
+        </div>
+        <div class="col-12 col-md-12">
+            {% load static %}
+            <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g1.png' %}" alt="">
         </div>
     </div>
+</div>
 </section>
     <section id="sort">
         <div class="d-flex flex-wrap bd-highlight">
@@ -340,21 +383,21 @@ homepage
                 class="flex-grow-1 bd-highlight box-about ">
                 <div style="height: 100%; display: flex;align-items: center;justify-content: center;flex-wrap: wrap;">
                     <div style="padding:1em;color: white;font-weight: 500;">
-                    <p class="tts">
+                    <p class="tts text-md-center text-lg-start text-center">
                         Second - коммерческий проект. <span style="color: black;">Мы не берем деньги у государства,</span> <br>  а существуем и развиваемся
                         только на вырученные от продаж средства.
 
                     </p>
-                    <p class="tts" style="margin-top: 64px;">
+                    <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;">
 
                         Мы сотрудничаем с <span style="color: black;">благотворительными организациями</span>  по нескольким направлениям и всегда открыты к
                         новым партнерствам.
 
                     </p>
-                    <p class="tts" style="margin-top: 64px;">
+                    <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;">
                         Если вы хотите предложить интересную активность в этом направлении, пишите нам  <button style="    background: none;
                         border: none;" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><a href="#" style="color: black;">сюда</a> </button>
-<div style="top: 20%;" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -363,6 +406,11 @@ homepage
         </div>
         <div class="modal-body">
           <form id="form3" class="form3">
+            <div class="sotrm" >
+                <div class="alert alert-success" role="alert" >
+                    Завка успешно отправлена!
+                  </div>
+            </div>
             <div class="mb-3">
                 <input required type="text" class="form-control names" placeholder="Имя">
             </div>
@@ -411,7 +459,7 @@ homepage
                 width: 100%;
             
                 text-align: center;">
-                 <a  href="tel:+77475232269" style="text-decoration: none; color: #23164B;"
+                 <a  href="tel:+77475232269" class="text-flicker" style="text-decoration: none; color: #23164B;"
                  >
                  {% load static %}
                  <img class="img-fluid" src="{% static 'images/phone.png' %}" alt=""> +7 747 523 22 69
