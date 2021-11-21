@@ -7,6 +7,26 @@ body {
 #sort{
    background: #a9ab49;;
 }
+.carousel-indicator button{
+    width: 20px;
+     height: 20px;
+      border-radius: 50%;
+      background: #EB5534;
+      margin: 1em;
+      border: none;
+    }
+
+.carousel-indicator{
+   text-align: center;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+}
+
+.active-carusel{
+   border: 3px solid black;
+   border-radius: 50%;
+}
 #about{
     background-color: #A9AB49;
 }
@@ -455,6 +475,14 @@ body {
     }
 }
 @media (max-width:400px){
+    .carousel-indicator button{
+        width: 15px;
+         height: 15px;
+          border-radius: 50%;
+          background: #EB5534;
+          margin: 1em;
+          border: none;
+        }
     .otv{
         padding-left: 4em;
                    padding-right: 4em;
@@ -464,24 +492,4 @@ body {
                   padding-top: 1em;
                    text-align: center;
    }
-}
-.carousel-indicator button{
-     width: 20px;
-      height: 20px;
-       border-radius: 50%;
-       background: #EB5534;
-       margin: 1em;
-       border: none;
-     }
-
-.carousel-indicator{
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.active-carusel{
-    border: 3px solid black;
-    border-radius: 50%;
 }
