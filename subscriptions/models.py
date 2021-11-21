@@ -43,3 +43,20 @@ class Works(models.Model):
         
         verbose_name = 'Заявку на сотрудничество'
         verbose_name_plural = 'Заявки на сотрудничество'
+
+
+class Comments(models.Model):
+    name_user = models.CharField('Имя клиента', max_length=255)
+    message_text = models.TextField('сообщение от клиента', max_length=1000, null=True, help_text='сообщение от клиента')
+    moderation = models.BooleanField('Комментарий допущен?', default=False, help_text='Комментарий допущен?')
+    created = models.DateTimeField('Дата создания комментария',auto_now=True, auto_now_add=False)
+    
+    def __str__(self):
+        return self.name_user
+
+
+
+    class Meta:
+        
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'

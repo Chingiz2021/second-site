@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 
-from .models import Orders ,Works
+from .models import Orders ,Works, Comments
 
 admin.site.site_header = 'Админ панель(SECOND)'
 
@@ -32,3 +32,13 @@ class WorksAdmin(admin.ModelAdmin):
     ordering = ('-created',)
     readonly_fields = ['created']
     fields = ('email', 'phone', 'name','prosmotr','message' ,'created',)
+
+@admin.register(Comments)
+class CommentsAdmin(admin.ModelAdmin):
+    list_display = ('name_user', 'message_text', 'created','moderation',)
+    # list_editable = ('active',)
+    list_filter = ('moderation','created',)
+    search_fields = ('name_user',)
+    ordering = ('-created',)
+    readonly_fields = ['created']
+    fields = ('name_user', 'message_text', 'created','moderation',)

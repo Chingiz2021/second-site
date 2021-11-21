@@ -10,6 +10,31 @@ body {
 #about{
     background-color: #A9AB49;
 }
+.cards{
+    width: 18rem;
+    position: absolute;
+    top: 3em;
+    right: 4em;
+    z-index: 1;
+    border: none;
+}
+.cards a{
+    
+    color:#C5C5C5 ;
+    text-decoration: none;
+}
+.cards p{
+    
+    color:#23164B ;
+
+}
+#comments{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/bgcomments.png");
+    min-height: 70vh;
+}
 .sotrm{
     display: none;
 }
@@ -253,6 +278,19 @@ body {
         
     }
 }
+@media (max-width:1200px) {
+.cards{
+    width: 18rem;
+    position: absolute;
+    top: 1em;
+    right: 0;
+    z-index: 1;
+    border: none;
+}
+.cards p{
+    font-size: .7em;
+}
+}
 @media (max-width:1130px) {
     .p1{
         font-size: 1.1em;
@@ -265,6 +303,14 @@ body {
     }
 }
 @media (max-width:990px) {
+    .cards{
+        width: 18rem;
+        position: absolute;
+        top: 3em;
+        right: 5em;
+        z-index: 1;
+        border: none;
+    }
     #box2{
         min-height: 60vh;
         
@@ -411,4 +457,23 @@ body {
                    text-align: center;
    }
 }
+.carousel-indicator button{
+     width: 20px;
+      height: 20px;
+       border-radius: 50%;
+       background: #EB5534;
+       margin: 1em;
+       border: none;
+     }
 
+.carousel-indicator{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.active-carusel{
+    border: 3px solid black;
+    border-radius: 50%;
+}

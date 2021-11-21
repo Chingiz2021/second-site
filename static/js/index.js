@@ -1,8 +1,12 @@
+
+
 // Находим на странице форму и инпут
 const form = document.querySelector('.form');
 
 const form2 = document.querySelector('#form2');
 const form3 = document.querySelector('.form3');
+
+
 
 let arrpovod = []
 // Навешиваем на форму обработчик отправки 
@@ -231,6 +235,16 @@ function onDrugoe9(){
   }
   
   console.log(arrpovod);
+}
+function activefunc() {
+  document.querySelector('.active1').classList.add('active-carusel')
+}
+function onTextComment(params) {
+  let docs = params.parentNode
+  let name = docs.children[0]
+  let comment = docs.children[1]
+  
+  document.querySelector('.bodys').innerHTML = comment.innerHTML
 }
 form.onsubmit = async function(e) {
   

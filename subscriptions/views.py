@@ -14,7 +14,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.generic import TemplateView
 
-from .models import  Orders, Works
+from .models import  Orders, Works, Comments
 from .email import send_admin_email, send_client_email, send_admin_email_sotr
 
 def send_message_mail(email,message):
@@ -74,9 +74,22 @@ def create_orders_sotrud(request):
         
         return JsonResponse({'message': True})
 
+@csrf_exempt 
+def create_comments(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        comment = Comments.objects.create(
+                name_user = data['name_user'],
+                message_text = data['message_text'],
+                )
+        return JsonResponse({'message': True})
 
 def home_page(request):
-    return render(request, 'index.html')
+    comments = Comments.objects.filter(moderation=True)
+    context = {
+        'comments':comments
+    }
+    return render(request, 'index.html',context=context)
 
 def page_oferta(request):
     return render(request, 'oferta.html')
