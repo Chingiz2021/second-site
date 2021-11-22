@@ -255,7 +255,7 @@ function activefunc(element) {
     clickbutton.style = 'border: 2px #EB5534 solid;height: 20px;width: 20px;'
   }
   if (clickbutton != element){
-    element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;height: 18px;width: 18px;'
+    element.style = 'border: 1px #a9a7a7 solid;border-radius: 50%;'
     clickbutton = element
   }
 }
