@@ -253,10 +253,10 @@ function activefunc(element) {
 }
 if(document.documentElement.clientWidth < 990){
   if(clickbutton){
-    clickbutton.style = 'margin: 10px;padding: 0;border: 2px #EB5534 solid;'
+    clickbutton.style = 'margin: 10px;padding: 0;border: 2px #EB5534 solid;width: 20px;height: 20px;'
   }
   if (clickbutton != element){
-    element.style = 'border: 2px #a9a7a7 solid;margin: 10px;padding: 0;'
+    element.style = 'border: 2px #a9a7a7 solid;margin: 10px;padding: 0;width: 20px;height: 20px;'
     clickbutton = element
   }
 }
