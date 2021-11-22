@@ -60,3 +60,21 @@ class Comments(models.Model):
         
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
+
+
+
+class Commands(models.Model):
+    name_user = models.CharField('Имя клиента', max_length=255)
+    message_text = models.TextField('сообщение от клиента', max_length=1000, null=True, help_text='сообщение от клиента')
+    phone = models.CharField('Телефонный номер клиента', max_length=255)
+    created = models.DateTimeField('Дата создания комментария',auto_now=True, auto_now_add=False)
+    prosmotr = models.BooleanField('Заявка просмотрена ', default=False, help_text='просмотрена ли заявка?')
+    def __str__(self):
+        return self.name_user
+
+
+
+    class Meta:
+        
+        verbose_name = 'Хочу в команду'
+        verbose_name_plural = 'Хотят в команду'

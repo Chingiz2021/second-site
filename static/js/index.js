@@ -6,6 +6,7 @@ const form = document.querySelector('.form');
 const form2 = document.querySelector('#form2');
 const form3 = document.querySelector('.form3');
 const form5 = document.querySelector('#myform');
+const form6 = document.querySelector('#myform2');
 
 
 
@@ -373,9 +374,11 @@ var maskOptions = {
     lazy: false
 } 
 var element2 = document.getElementById('phone2');
+var element22 = document.getElementById('phone22');
 
 var mask = new IMask(element, maskOptions);
 var mask2 = new IMask(element2, maskOptions);
+var mask22 = new IMask(element22, maskOptions);
 if(document.documentElement.clientWidth < 990){
   const navLinks = document.querySelectorAll('.nav-item')
   const menuToggle = document.getElementById('navbarSupportedContent')
@@ -417,6 +420,41 @@ form5.onsubmit = async function(e) {
 succes.classList.remove('succes-als')
  }, 2000);
  fetch('/comment_create', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(function (responce) {
+    return responce.json();
+  }).then(function (data) {
+    console.log(data);
+  })
+}
+
+form6.onsubmit = async function(e) {
+  e.preventDefault();
+  const name = document.querySelector('.nameso2');
+  const  phone = document.querySelector(".phone22");
+  const  mess = document.querySelector(".messageso2");
+
+  let data = {
+    "name_user": name.value,
+    "phone": phone.value,
+    "message_text": mess.value,
+ }
+
+ let succes = document.querySelector('.sotrmes2')
+ console.log(data);
+ succes.classList.add('succes-als')
+ setTimeout(() => {
+  name.value = ''
+  mess.value = ''
+  phone.value = ''
+succes.classList.remove('succes-als')
+ }, 2000);
+ fetch('/create_commands', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
