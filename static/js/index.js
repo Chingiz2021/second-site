@@ -251,7 +251,15 @@ function activefunc(element) {
     clickbutton = element
   }
 }
-
+else{
+  if(clickbutton){
+    clickbutton.style = 'opacity:1'
+  }
+  if (clickbutton != element){
+    element.style = 'opacity:0.7'
+    clickbutton = element
+  }
+}
 
 
 }
