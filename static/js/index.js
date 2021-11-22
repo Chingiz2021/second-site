@@ -242,6 +242,7 @@ function onDrugoe9(){
 }
 let clickbutton
 function activefunc(element) {
+  if(document.documentElement.clientWidth > 990){
   if(clickbutton){
     clickbutton.style = 'border: 2px #EB5534 solid;'
   }
@@ -249,7 +250,7 @@ function activefunc(element) {
     element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;margin: 1em;height: 20px;width: 20px;'
     clickbutton = element
   }
-  
+}
 
 
 }
