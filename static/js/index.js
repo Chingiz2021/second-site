@@ -243,7 +243,7 @@ function onDrugoe9(){
 let clickbutton
 function activefunc(element) {
   if(clickbutton){
-    clickbutton.style = 'border: none'
+    clickbutton.style = 'border: 2px #EB5534 solid;'
   }
   if (clickbutton != element){
     element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;margin: 1em;height: 20px;width: 20px;'
