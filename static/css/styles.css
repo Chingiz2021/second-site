@@ -7,13 +7,19 @@ body {
 #sort{
    background: #a9ab49;;
 }
+.adss{
+    border: 3px #a9a7a7 solid;
+}
 .carousel-indicator button{
     width: 20px;
      height: 20px;
       border-radius: 50%;
       background: #EB5534;
       margin: 1em;
-      border: none;
+      border: 2px #EB5534 solid;
+
+      
+      
     }
 
 .carousel-indicator{
@@ -23,10 +29,7 @@ body {
    width: 100%;
 }
 
-.active-carusel{
-   border: 3px solid black;
-   border-radius: 50%;
-}
+
 #about{
     background-color: #A9AB49;
 }
@@ -342,6 +345,20 @@ body {
     }
 }
 @media (max-width:990px) {
+    .carousel-indicator button{
+        width: 20px;
+         height: 20px;
+          border-radius: 50%;
+          background: #EB5534;
+          margin: 1em;
+          border: 2px #EB5534 solid;
+        }
+        .carousel-indicator {
+           bottom: -4em;
+            }
+            .btn-cars{
+                margin-top: 6em;
+            }
     .cards{
         width: 18rem;
         position: absolute;
@@ -422,6 +439,10 @@ body {
           background: #EB5534;
           margin: .3em;
           border: none;
+        }
+        .cards{
+            top: 1.5em;
+            right: 2em;
         }
     #about{
         background-color: white;

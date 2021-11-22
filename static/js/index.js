@@ -240,8 +240,18 @@ function onDrugoe9(){
   
   console.log(arrpovod);
 }
-function activefunc() {
-  document.querySelector('.active1').classList.add('active-carusel')
+let clickbutton
+function activefunc(element) {
+  if(clickbutton){
+    clickbutton.style = 'border: none'
+  }
+  if (clickbutton != element){
+    element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;margin: 1em;height: 23px;width: 23px;'
+    clickbutton = element
+  }
+  
+
+
 }
 function onTextComment(params) {
   let docs = params.parentNode
