@@ -246,7 +246,7 @@ function activefunc(element) {
     clickbutton.style = 'border: none'
   }
   if (clickbutton != element){
-    element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;margin: 1em;height: 23px;width: 23px;'
+    element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;margin: 1em;height: 20px;width: 20px;'
     clickbutton = element
   }
   
