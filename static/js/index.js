@@ -250,6 +250,14 @@ function activefunc(element) {
     element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;margin: 1em;height: 20px;width: 20px;'
     clickbutton = element
   }
+}else{
+  if(clickbutton){
+    clickbutton.style = 'border: 2px #EB5534 solid;height: 20px;width: 20px;'
+  }
+  if (clickbutton != element){
+    element.style = 'border: 2px #a9a7a7 solid;min-height: 18px;border-radius: 50%;height: 18px;width: 18px;'
+    clickbutton = element
+  }
 }
 
 
