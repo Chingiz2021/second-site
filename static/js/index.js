@@ -251,7 +251,7 @@ function activefunc(element) {
     clickbutton = element
   }
 }
-else{
+if(document.documentElement.clientWidth < 990){{
   if(clickbutton){
     clickbutton.style = 'opacity:1'
   }
