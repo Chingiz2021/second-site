@@ -425,7 +425,7 @@ homepage
                 <textarea placeholder="Ваше сообщение" class="form-control message" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
           <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit" class="btn btn-primary">Отправить</button>
-        
+        </form>
       </div>
     </div>
   </div>
@@ -558,6 +558,10 @@ homepage
                       </div>
                   </div>
                 </div>
+                <div>
+                  
+                </div>
+                
               </div>
         </div>
 
@@ -747,6 +751,38 @@ homepage
                 </div>
               </div>
         </div>
+        <div class="text-center mt-4 " style="margin-bottom: 4em;">
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 style="color: #23164b;" class="modal-title" id="exampleModalLabel">Комментарий</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="myform" class="myform">
+                    <div class="sotrmes text-center" >
+                        <div class="alert alert-success" role="alert" >
+                            Комментарий успешно отправлен!
+                          </div>
+                    </div>
+                    <div class="mb-3">
+                        <input required type="text" class="form-control nameso" placeholder="Ваше Имя">
+                    </div>
+                   
+                    <div class="form-group">
+                        
+                        <textarea required placeholder="Ваш отзыв" class="form-control messageso" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                  <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+              </div>
+            </div>
+            </div>
+          </div>
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal4" data-bs-whatever="@mdo" style="background-color: #EB5534;color: white;" type="button" class="btn ">Написать отзыв</button>
+        </div>
+        
     </div>
 </div>
 </section>

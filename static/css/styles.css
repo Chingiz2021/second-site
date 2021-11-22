@@ -58,6 +58,9 @@ body {
 .sotrm{
     display: none;
 }
+.sotrmes{
+    display: none;
+}
 .sorm2{
     display: block;
     position: absolute;
@@ -265,6 +268,14 @@ body {
     display: block;
     position: absolute;
     top: 1em;
+}
+.succes-als{
+    display: block;
+    position: absolute;
+    top: 1em;
+    width: 100%;
+    padding: 1em;
+    left: 0;
 }
 .text-other{
     width: 14em;

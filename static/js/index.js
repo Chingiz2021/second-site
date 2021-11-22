@@ -5,6 +5,9 @@ const form = document.querySelector('.form');
 
 const form2 = document.querySelector('#form2');
 const form3 = document.querySelector('.form3');
+const form5 = document.querySelector('#myform');
+
+
 
 
 
@@ -394,3 +397,35 @@ for(let i=0; i<links.length; i++){
   });
 }
 
+form5.onsubmit = async function(e) {
+  e.preventDefault();
+  console.log(1212);
+  const name = document.querySelector('.nameso');
+  const mess = document.querySelector(".messageso");
+
+  let data = {
+    "name_user": name.value,
+    "message_text": mess.value
+ }
+
+ let succes = document.querySelector('.sotrmes')
+ console.log(succes);
+ succes.classList.add('succes-als')
+ setTimeout(() => {
+  name.value = ''
+  mess.value = ''
+succes.classList.remove('succes-als')
+ }, 2000);
+ fetch('/comment_create', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(function (responce) {
+    return responce.json();
+  }).then(function (data) {
+    console.log(data);
+  })
+}
