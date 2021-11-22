@@ -251,12 +251,12 @@ function activefunc(element) {
     clickbutton = element
   }
 }
-if(document.documentElement.clientWidth < 990){{
+if(document.documentElement.clientWidth < 990){
   if(clickbutton){
-    clickbutton.style = 'opacity:1'
+    clickbutton.style = 'border: 2px #EB5534 solid;height: 20px;width: 20px;'
   }
   if (clickbutton != element){
-    element.style = 'opacity:0.7'
+    element.style = 'border: 2px #a9a7a7 solid;border-radius: 50%;height: 18px;width: 14px;'
     clickbutton = element
   }
 }
