@@ -9,4 +9,4 @@ up:
 	docker-compose up -d
 
 run_dev:
-	docker-compose --file docker-compose.dev.yml up 
+	sudo docker-compose --file docker-compose.dev.yml up
