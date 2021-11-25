@@ -4,7 +4,6 @@ services:
   datadb:
     restart: always
     image: "postgres:14-alpine"
-    restart: always
     container_name: data_appsdb
     volumes:
         - .:/var/lib/postgresql/data
