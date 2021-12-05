@@ -5,3 +5,4 @@ https://dev.to/thepylot/how-to-export-import-data-django-package-series-3-39mk e
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=postgres
+python manage.py migrate yourapp --fake

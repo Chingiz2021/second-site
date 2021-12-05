@@ -29,7 +29,12 @@ body {
    bottom: 0;
    width: 100%;
 }
-
+.img-log{
+    position: absolute;
+    top: 0;
+    width: 150px;
+    margin-top: .8em;
+}
 
 #about{
     background-color: #A9AB49;
@@ -433,6 +438,12 @@ body {
 
 }
 @media (max-width:600px){
+    .img-log{
+        position: absolute;
+        top: 0;
+        width: 100px;
+        margin-top: 1em;
+    }
     .carousel-indicator button{
         width: 20px;
          height: 20px;

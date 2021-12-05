@@ -9,19 +9,31 @@ admin.site.site_header = 'Админ панель(SECOND)'
 
 # admin.site.unregister(User)
 # admin.site.unregister(Group)
-admin.site.register(TypesItem)
+
+
+@admin.register(TypesItem)
+class TypesItemAdmin(admin.ModelAdmin):
+
+
+    list_display = ('id','title', 'price',)
+    # list_editable = ('active',)
+    list_filter = ('id','title', 'price',)
+    search_fields = ('id','title',)
+    ordering = ('-id',)
+    
+    fields = ('id','title', 'price',)
 
 @admin.register(Orders)
 class OrdersAdmin(admin.ModelAdmin):
 
 
-    list_display = ('id','phone', 'email', 'created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
+    list_display = ('id','phone', 'email','manager', 'created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
     # list_editable = ('active',)
     list_filter = ('prosmotr','obrabotka','obrabotka_scklad','obrabotka_end','created',)
     search_fields = ('email', 'phone')
     ordering = ('-created',)
-    readonly_fields = ['created','id']
-    fields = ('id','email', 'phone', 'name','type','typevesch','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
+    readonly_fields = ['created','id','итого']
+    fields = ('id','email', 'phone', 'name','type','typevesch','итого','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
 
 @admin.register(Works)
 class WorksAdmin(admin.ModelAdmin):
