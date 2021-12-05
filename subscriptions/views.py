@@ -53,6 +53,19 @@ def create_orders(request):
         return JsonResponse({'message': 'ok'})
 
 
+def get_price(request):
+    if request.method == 'GET':
+        data = json.loads(request.body)
+        
+        order = Orders.objects.get(
+                id = data['pk']
+        )
+        return JsonResponse({'message': order.total})
+
+    if request.method == 'GET':
+        return JsonResponse({'message': 'ok'})
+
+
 @csrf_exempt 
 def create_orders_sotrud(request):
     if request.method == 'POST':

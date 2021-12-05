@@ -1,7 +1,7 @@
 1.make build
 3.make create_user
 docker-compose run appdjango python manage.py createsuperuser
-
+https://dev.to/thepylot/how-to-export-import-data-django-package-series-3-39mk exel in django
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=postgres

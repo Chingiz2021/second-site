@@ -2,26 +2,26 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 
-from .models import Orders ,Works, Comments , Commands
+from .models import Orders ,Works, Comments , Commands,TypesItem
 
 admin.site.site_header = 'Админ панель(SECOND)'
 
 
 # admin.site.unregister(User)
 # admin.site.unregister(Group)
-
+admin.site.register(TypesItem)
 
 @admin.register(Orders)
 class OrdersAdmin(admin.ModelAdmin):
 
 
-    list_display = ('phone', 'email', 'created', 'prosmotr',)
+    list_display = ('id','phone', 'email', 'created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
     # list_editable = ('active',)
     list_filter = ('prosmotr','obrabotka','obrabotka_scklad','obrabotka_end','created',)
     search_fields = ('email', 'phone')
     ordering = ('-created',)
-    readonly_fields = ['created']
-    fields = ('email', 'phone', 'name','type', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
+    readonly_fields = ['created','id']
+    fields = ('id','email', 'phone', 'name','type','typevesch','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
 
 @admin.register(Works)
 class WorksAdmin(admin.ModelAdmin):
@@ -35,7 +35,7 @@ class WorksAdmin(admin.ModelAdmin):
 
 @admin.register(Comments)
 class CommentsAdmin(admin.ModelAdmin):
-    list_display = ('name_user', 'message_text', 'created','moderation',)
+    list_display = ('id','name_user', 'message_text', 'created','moderation',)
     # list_editable = ('active',)
     list_filter = ('moderation','created',)
     search_fields = ('name_user',)
