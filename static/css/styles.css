@@ -10,6 +10,7 @@ body {
 .adss{
     border: 3px #a9a7a7 solid;
 }
+
 .carousel-indicator button{
     width: 20px;
      height: 20px;
@@ -442,6 +443,9 @@ body {
         .cards{
             top: 1.5em;
             right: 2em;
+        }
+        #o-services{
+            min-height: 90vh;
         }
     #about{
         background-color: white;
