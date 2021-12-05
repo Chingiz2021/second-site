@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
-
+from import_export.admin import ExportActionMixin
 from .models import Orders ,Works, Comments , Commands,TypesItem
 
 admin.site.site_header = 'Админ панель(SECOND)'
@@ -9,6 +9,7 @@ admin.site.site_header = 'Админ панель(SECOND)'
 
 # admin.site.unregister(User)
 # admin.site.unregister(Group)
+
 
 
 @admin.register(TypesItem)
@@ -24,8 +25,8 @@ class TypesItemAdmin(admin.ModelAdmin):
     fields = ('id','title', 'price',)
 
 @admin.register(Orders)
-class OrdersAdmin(admin.ModelAdmin):
-
+class OrdersAdmin(ExportActionMixin,admin.ModelAdmin):
+    
 
     list_display = ('id','phone', 'email','manager', 'created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
     # list_editable = ('active',)
