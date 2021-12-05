@@ -5,6 +5,18 @@
         <img style="position: absolute;
         top: 0;" class="img-fluid" src="{% static 'images/logo1.png' %}" alt="">
       </a>
+      <li class=" d-lg-none d-block">
+        <a  href="tel:+77077678676" class="text-flicker" style="text-decoration: none;">
+          {% load static %}
+          <img class="img-fluid mt-1" src="{% static 'images/pp.png' %}">
+        </a>
+        <a style="text-decoration: none;margin-left:2em" href="https://wa.me/77077678676/" target="blank">
+          {% load static %}
+          <img  class="img-fluid mt-1" src="{% static 'images/ww.png' %}">
+        </a>
+       
+      </li>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,8 +37,19 @@
           <li class="nav-item">
             <a class="nav-link"   href="/#contacts">Контакты</a>
           </li>
-
-         
+          <li class="nav-item d-lg-block d-none">
+            <a  href="tel:+77077678676" class="text-flicker" style="text-decoration: none;">
+              {% load static %}
+              <img style="margin-left: 1em;" class="img-fluid mt-2" src="{% static 'images/pp.png' %}">
+            </a>
+           
+          </li>
+          <li class="nav-item d-lg-block d-none">
+            <a style="text-decoration: none" href="https://wa.me/77077678676/" target="blank">
+            {% load static %}
+            <img style="margin-left: 2em;" class="img-fluid mt-2" src="{% static 'images/ww.png' %}">
+          </a>
+          </li>
         </ul>
        
       </div>

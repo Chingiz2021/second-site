@@ -31,7 +31,7 @@ homepage
                             <button  type="submit" style="width: 100%;background-color: #23164B;" type="button"
                                 class="btn btn-secondary">Отправить</button>
                         </form>
-                        <form id="form2" class="form2 " style="min-height: 24em;">
+                        <form id="form2" class="form2 " style="min-height: 24em; padding: 1em;">
                             <p style="font-size: 20px;">Укажите <br>категорию вещей для вывоза</p>
                             <div class="overflow-auto" style="height: 8em;">
 
@@ -42,63 +42,63 @@ homepage
                                   </div>
                             </div>
     
-                            <div class="form-check">
-                                <input onclick="onDrugoe9()" class="form-check-input od" type="checkbox" value="" id="flexCheckDefault">
+                            <div class="form-check" >
+                                <input onclick="onDrugoe9()" class="form-check-input od" type="checkbox" value="" id="flexCheckDefault2">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Одежду
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input onclick="onDrugoe8()" class="form-check-input ob" type="checkbox" value="" id="flexCheckDefault">
+                                <input onclick="onDrugoe8()" class="form-check-input ob" type="checkbox" value="" id="flexCheckDefault3">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Обувь
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input onclick="onDrugoe7()" class="form-check-input pos" type="checkbox" value="" id="flexCheckDefault">
+                                <input onclick="onDrugoe7()" class="form-check-input pos" type="checkbox" value="" id="flexCheckDefault4">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Посуду
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input onclick="onDrugoe6()" class="form-check-input aks" type="checkbox" value="" id="flexCheckDefault">
+                                <input onclick="onDrugoe6()" class="form-check-input aks" type="checkbox" value="" id="flexCheckDefault5">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Аксессуары
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input onclick="onDrugoe5()" class="form-check-input texn" type="checkbox" value="" id="flexCheckDefault">
+                                <input onclick="onDrugoe5()" class="form-check-input texn" type="checkbox" value="" id="flexCheckDefault6">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Бытовую
                                     технику
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input onclick="onDrugoe4()" class="form-check-input meb" type="checkbox" value="" id="flexCheckDefault">
+                                <input onclick="onDrugoe4()" class="form-check-input meb" type="checkbox" value="" id="flexCheckDefault7">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Мебель
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input onclick="onDrugoe3()" class="form-check-input book" type="checkbox" value="" id="flexCheckDefault">
+                                <input onclick="onDrugoe3()" class="form-check-input book" type="checkbox" value="" id="flexCheckDefault8">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Книги
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input onclick="onDrugoe2()" class="form-check-input zapas" type="checkbox" value="" id="flexCheckDefault">
+                                <input onclick="onDrugoe2()" class="form-check-input zapas" type="checkbox" value="" id="flexCheckDefault9">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Запасные части
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input  onclick="onDrugoe1()" class="form-check-input  drugoe" type="checkbox" value="" id="flexCheckDefault">
+                                <input  onclick="onDrugoe1()" class="form-check-input  drugoe" type="checkbox" value="" id="flexCheckDefault11">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Домашние принадлежности
                                 </label>
                               </div> 
                               <div class="form-check">
-                                <input  onclick="onDrugoe()" class="form-check-input  drugoe" type="checkbox" value="" id="flexCheckDefault">
+                                <input  onclick="onDrugoe()" class="form-check-input  drugoe" type="checkbox" value="" id="flexCheckDefault12">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Другое
                                 </label>
@@ -144,20 +144,20 @@ homepage
                 <div class="col-12 " style="padding-top: 3em;position: relative;">
                     {% load static %}
                     <img  class="img-ser img-fluid d-none d-lg-block d-ms-block" src="{% static 'images/serv.png' %}" alt="">
-                    <p style="text-align: inherit;position: relative;">
-                      - Давно хотели перебрать шкаф, но не знаете, куда деть ненужную одежду? <br> <p></p>
-                      - Вы переезжаете и не знаете что сделать со старым ковром и сервантом? <br> <p></p>
-                      - Хотите освободить место где-то в гараже, убрав старый телевизор?
+                    
+                      <span style="text-align: inherit;position: relative;margin-top: 2em;">- Давно хотели перебрать шкаф, но не знаете, куда деть ненужную одежду?</span>  <p></p>
+                      <span style="text-align: inherit;position: relative;margin-top: 5em;"> - Вы переезжаете и не знаете что сделать со старым ковром и сервантом?</span>  <p></p>
+                      <span style="text-align: inherit;position: relative;margin-top: 2em;">- Хотите освободить место где-то в гараже, убрав старый телевизор?</span> 
                     </p>
                     <p style="margin-top: 46px;text-align: inherit;position: relative;font-weight: bold;">
                       Наш сервис избавит Вас от этой головной боли, мы совершенно бесплатно
                        вывезем ненужные вам вещи и даже заплатим за них небольшую сумму.
                     </p>
-                    <p style="margin-top: 46px;text-align: inherit;position: relative;">
-                      Пользуясь услугами Second, Вы бесплатно и безопасно утилизируете одежду и ненужные вещи,
-                       чем поможете планете очиститься. <br> <p></p> Ежегодно на
+                    <div style="margin-top: 46px;text-align: inherit;position: relative;">
+                     <span> Пользуясь услугами Second, Вы бесплатно и безопасно утилизируете одежду и ненужные вещи,
+                       чем поможете планете очиститься.</span> <br> <p></p> <span> Ежегодно на
                       свалках оказываются вещи, которые могли бы послужить новому владельцу ещё не один год. </span>
-                    </p>
+                       </div>
                    
                 </div>
             </div>
@@ -460,8 +460,37 @@ homepage
     <h2 class="text-center" style="padding-top: 3em;">Отзывы</h2>
     <div class="row">
         <div class="col-12 d-lg-block d-md-none d-none">
-            
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="min-height: 40vh;position: relative;margin-top: 4em;
+            <div class="row">
+              {% for object in comments|slice:":3" %}
+              <div class="col-lg-4">
+
+                  <div style="position: relative;">
+                    {% load static %}
+                    <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
+                    <div class="cards" >
+
+                        <div class="card-body">
+                          <p  class="card-title">{{object.name_user}}
+                            <br>
+                            {% load static %}
+                          <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
+                        </p>
+                        
+                          <p  class="card-text d-none">{{object.message_text}}</p>
+                          <p  class="card-texts ">{{object.message_text|slice:":100"}}...</p>
+                          <button  onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <span style="font-size: .7em;" href="#" >читать полностью</span>
+                          </button>
+                          
+                        </div>
+                      </div>
+                </div>
+               
+
+              </div>
+              {% endfor %}
+            </div>
+            <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="min-height: 40vh;position: relative;margin-top: 4em;
             ">
                 <div class="carousel-indicator">
                
@@ -568,7 +597,7 @@ homepage
                   
                 </div>
                 
-              </div>
+              </div> -->
         </div>
 
         <div class="col-12 d-lg-none d-md-block d-block">
@@ -579,9 +608,7 @@ homepage
                   <button style="margin: 10px;padding: 0;"  onclick="activefunc(this)"   data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active1" aria-current="true"></button>
                   <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"   data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" class="active2"  ></button>
                   <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"  data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"  class="active3" ></button>
-                  <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"    data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" class="active3" aria-current="true"></button>
-                  <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"   data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4" class="active4"  ></button>
-                  <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"   data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="5" class="active4"  ></button>
+                  
                 </div>
 
                 <div class="carousel-inner">
@@ -600,8 +627,9 @@ homepage
                                         {% load static %}
                                       <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
                                     </p>
-                                      
-                                      <p style="font-size: 1em;" class="card-text">{{object.message_text}}</p>
+                                    
+                                      <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
+                                      <p style="font-size: 1em;"  class="card-texts ">{{object.message_text|slice:":100"}}...</p>
                                       <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         <span style="font-size: .7em;" href="#" >читать полностью</span>
                                       </button>
@@ -630,7 +658,8 @@ homepage
                                       <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
                                     </p>
                                       
-                                      <p style="font-size: 1em;" class="card-text">{{object.message_text}}</p>
+                                    <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
+                                    <p style="font-size: 1em;"  class="card-texts ">{{object.message_text|slice:":100"}}...</p>
                                       <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         <span style="font-size: .7em;" href="#" >читать полностью</span>
                                       </button>
@@ -658,7 +687,8 @@ homepage
                                       <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
                                     </p>
                                       
-                                      <p style="font-size: 1em;" class="card-text">{{object.message_text}}</p>
+                                    <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
+                                    <p style="font-size: 1em;"  class="card-texts ">{{object.message_text|slice:":100"}}...</p>
                                       <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         <span style="font-size: .7em;" href="#" >читать полностью</span>
                                       </button>
@@ -670,90 +700,7 @@ homepage
                         {% endfor %}
                       </div>
                   </div>
-                  <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        {% for object in comments|slice:"3:4" %}
-                        <div class="col-12  d-flex justify-content-center">
-                            <div style="position: relative;">
-                                {% load static %}
-                                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
-                                <div class="cards" >
-    
-                                    <div class="card-body">
-                                      <p style="font-size: 1em;" class="card-title">{{object.name_user}}
-                                        <br>
-                                        {% load static %}
-                                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
-                                    </p>
-                                      
-                                      <p style="font-size: 1em;" class="card-text">{{object.message_text}}</p>
-                                      <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        <span style="font-size: .7em;" href="#" >читать полностью</span>
-                                      </button>
-                                      
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        {% for object in comments|slice:"4:5" %}
-                        <div class="col-12  d-flex justify-content-center">
-                            <div style="position: relative;">
-                                {% load static %}
-                                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
-                                <div class="cards" >
-    
-                                    <div class="card-body">
-                                      <p style="font-size: 1em;" class="card-title">{{object.name_user}}
-                                        <br>
-                                        {% load static %}
-                                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
-                                    </p>
-                                      
-                                      <p style="font-size: 1em;" class="card-text">{{object.message_text}}</p>
-                                      <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        <span style="font-size: .7em;" href="#" >читать полностью</span>
-                                      </button>
-                                      
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        {% for object in comments|slice:"5:6" %}
-                        <div class="col-12 d-flex justify-content-center">
-                            <div style="position: relative;">
-                                {% load static %}
-                                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
-                                <div class="cards" >
-    
-                                    <div class="card-body">
-                                      <p style="font-size: 1em;" class="card-title">{{object.name_user}}
-                                        <br>
-                                        {% load static %}
-                                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
-                                    </p>
-                                      
-                                      <p style="font-size: 1em;" class="card-text">{{object.message_text}}</p>
-                                      <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        <span style="font-size: .7em;" href="#" >читать полностью</span>
-                                      </button>
-                                      
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                      </div>
-                  </div>
+
                 </div>
               </div>
         </div>
@@ -816,10 +763,10 @@ homepage
                 width: 100%;
             
                 text-align: center;">
-                 <a  href="tel:+77475232269" class="text-flicker" style="text-decoration: none; color: #23164B;"
+                 <a  href="tel:+77077678676" class="text-flicker" style="text-decoration: none; color: #23164B;"
                  >
                  {% load static %}
-                 <img class="img-fluid" src="{% static 'images/phone.png' %}" alt=""> +7 747 523 22 69
+                 <img class="img-fluid" src="{% static 'images/phone.png' %}" alt=""> +7 707 767 86 76
                  </a>
                 </h5>
                
@@ -833,7 +780,7 @@ homepage
                 width: 100%;
               
                 text-align: center;">
-                <a style="text-decoration: none" href="https://wa.me/77475232269/" target="blank">
+                <a style="text-decoration: none" href="https://wa.me/77077678676/" target="blank">
                     <button class="btn" style="background-color: #23164B;color: white;">
                         <img class="img-fluid" src="{% static 'images/wath.png' %}" alt="">
                         <span style="font-size:.7em">Написать нам в WhatsApp</span>

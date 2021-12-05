@@ -76,13 +76,22 @@
       </div>
     <footer id="footer" class="py-4" style="background: #23164b;
     color: white;">
-      <div class="container text-end">
+      <!-- <div class="container text-end">
         <a  href="/oferta" style="text-decoration: none; color: white;"
         >
         <span style="cursor: pointer;">Оферта</span>
         </a>
         <button data-bs-toggle="modal" data-bs-target="#exampleModal5" data-bs-whatever="@mdo" style="background-color: #23164b;color: white;margin-left: 3em;" type="button" class="btn ">Хочу в команду</button>
-      </div>
+      </div> -->
+      <div class="container text-center">
+        <p>
+          {% load static %}
+          <img style="width: 35px;;margin:.5em" class="img-fluid " src="{% static 'images/inst.png' %}">
+          {% load static %}
+          <img style="width: 33px;margin:.5em" class="img-fluid " src="{% static 'images/fas.png' %}">
+        </p>
+        &copy; {% now 'Y' %} Second &ndash; Бесплатный сервис по вывозу ненужных вещей
+    </div>
     </footer>
 
     {% block js_libs %}
