@@ -16,9 +16,14 @@ class TypesItem(models.Model):
         try:
             price = str(self.price)[::-1]
             price = (' '.join(price[i:i+3] for i in range(0, len(price), 3))[::-1])
-            return f' артикул вещи : {self.id},\n  наименование: {self.title},\n  цена для продажи : {price} тг' 
+            return f' артикул вещи : {self.id},\n  наименование: {self.title},\n  цена для продажи : {price} тг\n\n' 
         except:
             return str('-')
+
+    @property
+    def заявка(self):
+        return ", ".join([str(p) for p in self.order_element.all()])
+
     class Meta:
         
         verbose_name = 'Вещь'
@@ -31,7 +36,7 @@ class Orders(models.Model):
     phone = models.CharField('Номер телефона клиента', max_length=255, null=True)
     email = models.CharField('Email клиента', max_length=255, null=True, blank=True)
     type = models.TextField('Указан тип вещей', max_length=1000, null=True, help_text='тип вещей указынный клиентом', blank=True)
-    typevesch = models.ManyToManyField(TypesItem, verbose_name='Вещи в заявке', blank=True)
+    typevesch = models.ManyToManyField(TypesItem, verbose_name='Вещи в заявке', blank=True,related_name="order_element")
     manager = models.CharField('Менеджер для этой заявки', max_length=255, null=True, blank=True)
     prosmotr = models.BooleanField('Заявка просмотрена ', default=False, help_text='просмотрена ли заявка?')
     obrabotka = models.BooleanField('Заявка обработана ', default=False, help_text='обработана  ли заявка?')
@@ -41,7 +46,7 @@ class Orders(models.Model):
     data_succes = models.DateTimeField('Дата когда нужно забрать вещи',null=True, blank=True)
     
     def __str__(self):
-        return self.phone or ''
+        return str(self.id) or ''
 
 
     @property
@@ -54,7 +59,9 @@ class Orders(models.Model):
         else:
             return '0 тг'
 
-
+    @property
+    def вещи(self):
+        return ", ".join([str(p) for p in self.typevesch.all()])
 
     class Meta:
         

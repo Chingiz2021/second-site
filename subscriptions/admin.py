@@ -13,28 +13,30 @@ admin.site.site_header = 'Админ панель(SECOND)'
 
 
 @admin.register(TypesItem)
-class TypesItemAdmin(admin.ModelAdmin):
+class TypesItemAdmin(ExportActionMixin,admin.ModelAdmin):
 
-
-    list_display = ('id','title', 'price',)
+    
+    list_display = ('id','title', 'price','заявка')
     # list_editable = ('active',)
     list_filter = ('id','title', 'price',)
     search_fields = ('id','title',)
     ordering = ('-id',)
-    
-    fields = ('id','title', 'price',)
+    readonly_fields = ['заявка']
+    fields = ('id','title', 'price','заявка',)
+
+
 
 @admin.register(Orders)
 class OrdersAdmin(ExportActionMixin,admin.ModelAdmin):
     
 
-    list_display = ('id','phone', 'email','manager', 'created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
+    list_display = ('id','phone', 'email','manager','вещи','итого', 'created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
     # list_editable = ('active',)
     list_filter = ('prosmotr','obrabotka','obrabotka_scklad','obrabotka_end','created',)
     search_fields = ('email', 'phone')
     ordering = ('-created',)
-    readonly_fields = ['created','id','итого']
-    fields = ('id','email', 'phone', 'name','type','typevesch','итого','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
+    readonly_fields = ['created','id','вещи', 'итого']
+    fields = ('id','email', 'phone', 'name','type','typevesch','вещи','итого','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
 
 @admin.register(Works)
 class WorksAdmin(admin.ModelAdmin):
