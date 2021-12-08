@@ -34,7 +34,7 @@ class OrdersAdmin(ExportActionMixin,admin.ModelAdmin):
     list_filter = ('prosmotr','obrabotka','obrabotka_scklad','obrabotka_end','created',)
     search_fields = ('adress', 'phone')
     ordering = ('-created',)
-    readonly_fields = ['created','id','вещи', 'итого']
+    readonly_fields = ['created','id',]
     fields = ('id','city', 'adress','phone', 'name','type','itogprice','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
 
 @admin.register(Works)

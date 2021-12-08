@@ -11,7 +11,7 @@ class Cont(models.Model):
 
     def __str__(self) -> str:
         return str(self.created)
-        
+
     @property
     def месяц(self):
         # return datetime.now().month - cre
@@ -37,26 +37,12 @@ class Orders(models.Model):
     obrabotka = models.BooleanField('Заявка обработана ', default=False, help_text='обработана  ли заявка?')
     obrabotka_scklad = models.BooleanField('Уже на складе', default=False, help_text='Вещи по заявке на складе?')
     obrabotka_end = models.BooleanField('Заявка закрыта', default=False, help_text='Заявка обрабатона и в архиве?')
-    created = models.DateTimeField('Дата создания заявки', auto_now_add=False)
+    created = models.DateTimeField('Дата создания заявки', auto_now_add=True)
     data_succes = models.DateTimeField('Дата когда нужно забрать вещи',null=True, blank=True)
     
     def __str__(self):
         return str(self.id) or ''
 
-
-    @property
-    def  итого(self):
-        price = self.typevesch.aggregate(Sum('price'))['price__sum']
-        if price:
-            price = str(price)[::-1]
-            price = (' '.join(price[i:i+3] for i in range(0, len(price), 3))[::-1])
-            return f'Итого вещей на продажу: {price} тг'
-        else:
-            return '0 тг'
-
-    @property
-    def вещи(self):
-        return ", ".join([str(p) for p in self.typevesch.all()])
 
     class Meta:
         
