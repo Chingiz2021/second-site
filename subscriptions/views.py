@@ -4,9 +4,9 @@ import json
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
+from django.core.exceptions import ObjectDoesNotExist
 from dotenv import load_dotenv
-
+from datetime import datetime
 load_dotenv()
 
 from django.shortcuts import render
@@ -14,8 +14,25 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.generic import TemplateView
 
-from .models import  Orders, Works, Comments, Commands
+from .models import  Orders, Works, Comments, Commands,Cont
 from .email import send_admin_email, send_client_email, send_admin_email_sotr, send_admin_email_commands
+
+@csrf_exempt 
+def create_counts(request):
+    if request.method == 'POST':
+       
+       
+    #    cont = Cont.objects.save()
+        try:
+            alls = Cont.objects.get(created__month = datetime.now().month)
+            alls.counts = alls.counts +1
+            alls.save()
+        except ObjectDoesNotExist:
+            alls = None
+        if not alls:
+            test = Cont.objects.create(counts = 1)
+        
+    return JsonResponse({'message': 'alls'})
 
 def send_message_mail(email,message):
     msg = MIMEMultipart('alternative')
@@ -39,12 +56,12 @@ def create_orders(request):
         order = Orders.objects.create(
                 name = data['name'],
                 phone = data['phone'],
-                email = data['email'],
+                adress = data['adress'],
                 type = data['type']
                 )
-        html_admin = send_admin_email(data['name'], data['phone'], data['email'], data['type'])
-        html_client = send_client_email(data['name'], data['phone'], data['email'])
-        send_message_mail(data['email'],html_client)
+        html_admin = send_admin_email(data['name'], data['phone'], data['adress'], data['type'])
+        # html_client = send_client_email(data['name'], data['phone'], data['email'])
+        # send_message_mail(data['email'],html_client)
         send_message_mail('second@2nd.kz',html_admin)
         
         return JsonResponse({'message': True})

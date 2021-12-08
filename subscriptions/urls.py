@@ -8,6 +8,7 @@ from .views import (
                    create_orders_sotrud,
                    create_commands,
                    get_price,
+                   create_counts,
                    RobotsTxtView,
                    SitemapXmlView,
                    )
@@ -22,6 +23,7 @@ urlpatterns = [
     ], 'orders'), namespace='orders')),
     path('sotrudnichestvo', create_orders_sotrud, name='sotr'),
     path('comment_create', create_comments, name='comment_create'),
+    path('create_counts', create_counts, name='create_counts'),
     path('create_commands', create_commands, name='create_commands'),
     path('get_price', get_price, name='get_price'),
     path('', home_page, name='home_page'),

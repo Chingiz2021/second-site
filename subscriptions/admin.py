@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 from import_export.admin import ExportActionMixin
-from .models import Orders ,Works, Comments , Commands,TypesItem
+from .models import Orders ,Works, Comments , Commands,Cont
 
 admin.site.site_header = 'Админ панель(SECOND)'
 
@@ -12,17 +12,16 @@ admin.site.site_header = 'Админ панель(SECOND)'
 
 
 
-@admin.register(TypesItem)
-class TypesItemAdmin(ExportActionMixin,admin.ModelAdmin):
-
+@admin.register(Cont)
+class ContAdmin(admin.ModelAdmin):
     
-    list_display = ('id','title', 'price','заявка')
+
+    list_display = ('counts','created','месяц',)
     # list_editable = ('active',)
-    list_filter = ('id','title', 'price',)
-    search_fields = ('id','title',)
-    ordering = ('-id',)
-    readonly_fields = ['заявка']
-    fields = ('id','title', 'price','заявка',)
+    list_filter = ('created',)
+    ordering = ('-created',)
+    readonly_fields = ['counts','created','месяц']
+    fields = ('counts','created','месяц')
 
 
 
@@ -30,13 +29,13 @@ class TypesItemAdmin(ExportActionMixin,admin.ModelAdmin):
 class OrdersAdmin(ExportActionMixin,admin.ModelAdmin):
     
 
-    list_display = ('id','phone', 'email','manager','вещи','итого', 'created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
+    list_display = ('id','phone','city', 'adress','type','itogprice','manager','created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
     # list_editable = ('active',)
     list_filter = ('prosmotr','obrabotka','obrabotka_scklad','obrabotka_end','created',)
-    search_fields = ('email', 'phone')
+    search_fields = ('adress', 'phone')
     ordering = ('-created',)
     readonly_fields = ['created','id','вещи', 'итого']
-    fields = ('id','email', 'phone', 'name','type','typevesch','вещи','итого','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
+    fields = ('id','city', 'adress','phone', 'name','type','itogprice','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
 
 @admin.register(Works)
 class WorksAdmin(admin.ModelAdmin):

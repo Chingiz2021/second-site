@@ -4,45 +4,40 @@ from django.urls import reverse
 from django.db.models import Sum
 from django.contrib.contenttypes.fields import GenericRelation
 import locale
-# locale.setlocale(locale.LC_ALL, '')
+from datetime import datetime
+class Cont(models.Model):
+    counts = models.IntegerField(' Количество посещений',default=0)
+    created = models.DateTimeField('Последняя дата и время посещения',auto_now=True, auto_now_add=False)
 
-
-class TypesItem(models.Model):
-    id = models.IntegerField('Артикул вещи',primary_key=True)
-    title = models.CharField('Тип вещи', max_length=255,null=True)
-    price =  models.DecimalField('Цена', max_digits=15, decimal_places=2,null=True)
-
-    def __str__(self):
-        try:
-            price = str(self.price)[::-1]
-            price = (' '.join(price[i:i+3] for i in range(0, len(price), 3))[::-1])
-            return f' артикул вещи : {self.id},\n  наименование: {self.title},\n  цена для продажи : {price} тг\n\n' 
-        except:
-            return str('-')
-
+    def __str__(self) -> str:
+        return str(self.created)
+        
     @property
-    def заявка(self):
-        return ", ".join([str(p) for p in self.order_element.all()])
+    def месяц(self):
+        # return datetime.now().month - cre
+        return self.created.month
 
     class Meta:
         
-        verbose_name = 'Вещь'
-        verbose_name_plural = 'Вещи'
+        verbose_name = 'Количество просмотров'
+        verbose_name_plural = 'Количество просмотров'
+
 
 
 class Orders(models.Model):
     # id = models.IntegerField('Артикул заявки',primary_key=True)
     name = models.CharField('Имя клиента', max_length=255,null=True)
     phone = models.CharField('Номер телефона клиента', max_length=255, null=True)
-    email = models.CharField('Email клиента', max_length=255, null=True, blank=True)
-    type = models.TextField('Указан тип вещей', max_length=1000, null=True, help_text='тип вещей указынный клиентом', blank=True)
-    typevesch = models.ManyToManyField(TypesItem, verbose_name='Вещи в заявке', blank=True,related_name="order_element")
+    city = models.CharField('Город клиента', max_length=255, null=True, blank=True)
+    adress = models.CharField('Адрес клиента', max_length=255, null=True, blank=True)
+    type = models.TextField('Список вещей', max_length=1000, null=True, help_text='список вещей указынный клиентом', blank=True)
+    itogprice = models.CharField('Цена вещей итого', max_length=255, null=True, blank=True)
     manager = models.CharField('Менеджер для этой заявки', max_length=255, null=True, blank=True)
     prosmotr = models.BooleanField('Заявка просмотрена ', default=False, help_text='просмотрена ли заявка?')
     obrabotka = models.BooleanField('Заявка обработана ', default=False, help_text='обработана  ли заявка?')
     obrabotka_scklad = models.BooleanField('Уже на складе', default=False, help_text='Вещи по заявке на складе?')
     obrabotka_end = models.BooleanField('Заявка закрыта', default=False, help_text='Заявка обрабатона и в архиве?')
-    created = models.DateTimeField('Дата создания заявки',auto_now=True, auto_now_add=False)
+    created = models.DateTimeField('Дата создания заявки', auto_now_add=False)
     data_succes = models.DateTimeField('Дата когда нужно забрать вещи',null=True, blank=True)
     
     def __str__(self):

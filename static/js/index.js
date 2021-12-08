@@ -8,9 +8,24 @@ const form3 = document.querySelector('.form3');
 const form5 = document.querySelector('#myform');
 const form6 = document.querySelector('#myform2');
 
+;
+function onCount(){
+  fetch('/create_counts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+  })
+  .then(function (responce) {
+    return responce.json();
+  }).then(function (data) {
+    console.log(data);
+  })
+}
 
-
-
+setTimeout(() => {
+  onCount()
+}, 4000)
 
 let arrpovod = []
 // Навешиваем на форму обработчик отправки 
@@ -295,7 +310,7 @@ form2.onsubmit = async function(e) {
   console.log(444);
   const name = document.querySelector('.name');
   const phone = document.querySelector('.phone');
-  const email = document.querySelector('.email');
+  const adress = document.querySelector('.email');
   const mess = document.querySelector(".textmessage");
   if(mess.value){
     arrpovod.push(mess.value)
@@ -312,7 +327,7 @@ form2.onsubmit = async function(e) {
   let data = {
     "name": name.value,
     "phone": phone.value,
-    "email": email.value,
+    "adress": adress.value,
     "type": arrpovod.join()
  }
  console.log(data);
@@ -341,7 +356,7 @@ mess.classList.remove('mess2')
   }).then(function (data) {
     name.value = ''
     phone.value = ''
-    email.value = ''
+    adress.value = ''
   })
 }
 
