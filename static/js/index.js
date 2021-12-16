@@ -344,6 +344,13 @@ let mess = document.querySelector('#mess');
 
 mess.classList.remove('mess2')
  }, 2000);
+ if(localStorage.getItem('succes')){
+  console.log(1);
+  name.value = ''
+  phone.value = ''
+  adress.value = ''
+ }
+ else{
  fetch('/orders/', {
     method: 'POST',
     headers: {
@@ -354,10 +361,12 @@ mess.classList.remove('mess2')
   .then(function (responce) {
     return responce.json();
   }).then(function (data) {
+    localStorage.setItem('succes', 'ok');
     name.value = ''
     phone.value = ''
     adress.value = ''
   })
+}
 }
 
 form3.onsubmit = async function(e) {
