@@ -330,27 +330,39 @@ form2.onsubmit = async function(e) {
     "adress": adress.value,
     "type": arrpovod.join()
  }
- console.log(data);
- let succes = document.querySelector('.order-alert')
- succes.classList.add('succes-al')
- setTimeout(() => {
+ 
 
-succes.classList.remove('succes-al')
-let form = document.querySelector('.form')
-form.classList.remove('form-none')
-let form2 = document.querySelector('#form2')
-form2.classList.remove('form2-block')
-let mess = document.querySelector('#mess');
-
-mess.classList.remove('mess2')
- }, 2000);
  if(localStorage.getItem('succes')){
-  console.log(1);
+  let form = document.querySelector('.form')
+  form.classList.remove('form-none')
+  let form2 = document.querySelector('#form2')
+  form2.classList.remove('form2-block')
+  let mess = document.querySelector('#mess');
+  
+  mess.classList.remove('mess2')
+  let succes = document.querySelector('.nonel')
+  succes.classList.add('addal')
+  setTimeout(() => {
+    succes.classList.remove('addal')
+  }, 6000);
   name.value = ''
   phone.value = ''
   adress.value = ''
  }
  else{
+  let succes = document.querySelector('.order-alert')
+  succes.classList.add('succes-al')
+  setTimeout(() => {
+ 
+ succes.classList.remove('succes-al')
+ let form = document.querySelector('.form')
+ form.classList.remove('form-none')
+ let form2 = document.querySelector('#form2')
+ form2.classList.remove('form2-block')
+ let mess = document.querySelector('#mess');
+ 
+ mess.classList.remove('mess2')
+  }, 2000);
  fetch('/orders/', {
     method: 'POST',
     headers: {

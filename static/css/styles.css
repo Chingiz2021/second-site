@@ -10,7 +10,14 @@ body {
 .adss{
     border: 3px #a9a7a7 solid;
 }
-
+.nonel{
+    display: none;
+}
+.addal{
+    display: block;
+    position: absolute;
+    left: 0;
+}
 .carousel-indicator button{
     width: 20px;
      height: 20px;
