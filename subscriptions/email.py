@@ -63,7 +63,7 @@ def send_admin_email(name, phone, email,types):
                 <p class="detail">Детали сообщения :</p>
                 <p><span>Имя клиента: </span> {name}</p>
                 <p><span>Телефон клиента: </span> {phone}</p>
-                <p><span>Email клиента: </span> {email}</p>
+                <p><span>Адрес клиента: </span> {email}</p>
                 <p><span>Тип вещей: </span> {types}</p>
                 
             </div>
@@ -75,7 +75,7 @@ def send_admin_email(name, phone, email,types):
     </html>
     '''.format(**locals())
     return html
-
+#gg
 def send_client_email(name, phone, email):
     style = """
     <style>

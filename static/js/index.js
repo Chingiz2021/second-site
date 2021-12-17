@@ -426,9 +426,10 @@ form3.onsubmit = async function(e) {
 };
 var element = document.getElementById('phone');
 var maskOptions = {
-    mask: '+7(000)000-00-00',
-    lazy: false
+  mask: '+{7}(000)000-00-00',
+  
 } 
+
 var element2 = document.getElementById('phone2');
 var element22 = document.getElementById('phone22');
 
