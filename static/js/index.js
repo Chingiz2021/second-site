@@ -10,6 +10,10 @@ const form6 = document.querySelector('#myform2');
 
 ;
 function onCount(){
+  if(localStorage.getItem('succes')){
+    console.log(11);
+  }
+  else{
   fetch('/create_counts', {
     method: 'POST',
     headers: {
@@ -21,6 +25,7 @@ function onCount(){
   }).then(function (data) {
     console.log(data);
   })
+}
 }
 
 setTimeout(() => {
@@ -292,6 +297,7 @@ form.onsubmit = async function(e) {
     const email = document.querySelector('.email');
     
     e.preventDefault();
+    if(phone.value.length === 16){
     if(name.value  && phone.value  && email.value ){
       let form = document.querySelector('.form')
       form.classList.add('form-none')
@@ -302,12 +308,18 @@ form.onsubmit = async function(e) {
     else{
         
     }
-
+  }else{
+    let ph = document.querySelector('.err')
+    ph.classList.add('blerr')
+    setTimeout(() => {
+      ph.classList.remove('blerr')
+    }, 2000);
+  }
 
 };
 form2.onsubmit = async function(e) {
   e.preventDefault();
-  console.log(444);
+ 
   const name = document.querySelector('.name');
   const phone = document.querySelector('.phone');
   const adress = document.querySelector('.email');
@@ -350,6 +362,7 @@ form2.onsubmit = async function(e) {
   adress.value = ''
  }
  else{
+   if(arrpovod.join().length > 0){
   let succes = document.querySelector('.order-alert')
   succes.classList.add('succes-al')
   setTimeout(() => {
@@ -363,6 +376,7 @@ form2.onsubmit = async function(e) {
  
  mess.classList.remove('mess2')
   }, 2000);
+ 
  fetch('/orders/', {
     method: 'POST',
     headers: {
@@ -378,6 +392,13 @@ form2.onsubmit = async function(e) {
     phone.value = ''
     adress.value = ''
   })
+}else{
+  let ph = document.querySelector('.err2')
+  ph.classList.add('blerr')
+  setTimeout(() => {
+    ph.classList.remove('blerr')
+  }, 2000);
+}
 }
 }
 

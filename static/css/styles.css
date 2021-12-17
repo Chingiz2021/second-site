@@ -13,6 +13,19 @@ body {
 .nonel{
     display: none;
 }
+.err{
+    display: none;
+    font-size: .6em;
+    color: red;
+}
+.err2{
+    display: none;
+    font-size: .6em;
+    color: red;
+}
+.blerr{
+    display: block;
+}
 .addal{
     display: block;
     position: absolute;
