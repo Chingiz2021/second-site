@@ -47,30 +47,38 @@ def send_message_mail(email,message):
     mail.login('second@2nd.kz', os.getenv('PASSWORD_MAIL'))
     mail.sendmail('second@2nd.kz', email, msg.as_string())
     mail.quit()
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
 
 @csrf_exempt 
 def create_orders(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        all_ord = Orders.objects.filter(phone = data['phone']).first()
-        if not all_ord:
+        ip = get_client_ip(request)
+        req_ip = Orders.objects.filter(ipuser = str(ip)).first()
+        
+        if not req_ip:
             order = Orders.objects.create(
                     name = data['name'],
                     phone = data['phone'],
                     adress = data['adress'],
-                    type = data['type']
+                    type = data['type'],
+                    ipuser = str(ip)
                     )
             html_admin = send_admin_email(data['name'], data['phone'], data['adress'], data['type'])
             # html_client = send_client_email(data['name'], data['phone'], data['email'])
             ## send_message_mail(data['email'],html_client)
-            send_message_mail('second@2nd.kz',html_admin) 
-            send_message_mail('admin@2nd.kz',html_admin)
+            # send_message_mail('second@2nd.kz',html_admin) 
+            # send_message_mail('admin@2nd.kz',html_admin)
             return JsonResponse({'message': True})
         else:
-            return JsonResponse({'message': True})
+            return JsonResponse({'message': False})
 
-        if request.method == 'GET':
-            return JsonResponse({'message': 'ok'})
 
 
 def get_price(request):

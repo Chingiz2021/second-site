@@ -27,6 +27,7 @@ class Cont(models.Model):
 class Orders(models.Model):
     # id = models.IntegerField('Артикул заявки',primary_key=True)
     name = models.CharField('Имя клиента', max_length=255,null=True)
+    ipuser = models.CharField('Ip адресс клиента', max_length=255,null=True)
     phone = models.CharField('Номер телефона клиента', max_length=255, null=True)
     city = models.CharField('Город клиента', max_length=255, null=True, blank=True)
     adress = models.CharField('Адрес клиента', max_length=255, null=True, blank=True)

@@ -360,6 +360,7 @@ form2.onsubmit = async function(e) {
   name.value = ''
   phone.value = ''
   adress.value = ''
+  arrpovod = []
  }
  else{
    if(arrpovod.join().length > 0){
@@ -386,7 +387,7 @@ form2.onsubmit = async function(e) {
   })
   .then(function (responce) {
     return responce.json();
-  }).then(function (data) {
+  }).then(function (resp) {
     localStorage.setItem('succes', 'ok');
     name.value = ''
     phone.value = ''

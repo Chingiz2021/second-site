@@ -29,13 +29,13 @@ class ContAdmin(admin.ModelAdmin):
 class OrdersAdmin(ExportActionMixin,admin.ModelAdmin):
     
 
-    list_display = ('id','phone','city', 'adress','type','itogprice','manager','created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
+    list_display = ('id','phone','city','ipuser', 'adress','type','itogprice','manager','created', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end',)
     # list_editable = ('active',)
     list_filter = ('prosmotr','obrabotka','obrabotka_scklad','obrabotka_end','created',)
-    search_fields = ('adress', 'phone')
+    search_fields = ('adress', 'phone','ipuser',)
     ordering = ('-created',)
-    readonly_fields = ['created','id',]
-    fields = ('id','city', 'adress','phone', 'name','type','itogprice','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
+    readonly_fields = ['created','id','ipuser',]
+    fields = ('id','ipuser','city', 'adress','phone', 'name','type','itogprice','manager','data_succes', 'prosmotr', 'obrabotka', 'obrabotka_scklad', 'obrabotka_end','created',)
 
 @admin.register(Works)
 class WorksAdmin(admin.ModelAdmin):
