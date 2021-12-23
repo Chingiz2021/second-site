@@ -73,8 +73,8 @@ def create_orders(request):
             html_admin = send_admin_email(data['name'], data['phone'], data['adress'], data['type'])
             # html_client = send_client_email(data['name'], data['phone'], data['email'])
             ## send_message_mail(data['email'],html_client)
-            # send_message_mail('second@2nd.kz',html_admin) 
-            # send_message_mail('admin@2nd.kz',html_admin)
+            send_message_mail('second@2nd.kz',html_admin) 
+            send_message_mail('admin@2nd.kz',html_admin)
             return JsonResponse({'message': True})
         else:
             return JsonResponse({'message': False})
