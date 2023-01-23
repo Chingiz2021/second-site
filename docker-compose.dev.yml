@@ -36,7 +36,7 @@ services:
 
   nginx:
     image: nginx:1.21
-    restart: unless-stopped
+    restart: always
     volumes:
       - ./dev/nginx:/etc/nginx/conf.d
       - ./static:/app/second/static
