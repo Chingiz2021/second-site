@@ -29,6 +29,9 @@ services:
     volumes:
       - .:/app/second
       - ./static:/app/second/static
+      - ./media:/app/second/media
+    # ports:
+    #     - "8001:8000"
 
 
   nginx:
@@ -37,6 +40,7 @@ services:
     volumes:
       - ./dev/nginx:/etc/nginx/conf.d
       - ./static:/app/second/static
+      - ./media:/app/second/media
     depends_on:
       - appdjango
     ports:
