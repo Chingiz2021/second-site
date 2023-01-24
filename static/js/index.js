@@ -8,7 +8,7 @@ const form3 = document.querySelector('.form3');
 const form5 = document.querySelector('#myform');
 const form6 = document.querySelector('#myform2');
 
-;
+
 function onCount(){
   if(localStorage.getItem('succes')){
     console.log(11);
@@ -291,13 +291,13 @@ function onTextComment(params) {
   document.querySelector('.bodys').innerHTML = comment.innerHTML
 }
 form.onsubmit = async function(e) {
-  
+    console.log(6666);
     const name = document.querySelector('.name');
     const phone = document.querySelector('.phone');
     const email = document.querySelector('.email');
     
     e.preventDefault();
-    if(phone.value.length === 16){
+    if(phone.value){
     if(name.value  && phone.value  && email.value ){
       let form = document.querySelector('.form')
       form.classList.add('form-none')
@@ -309,6 +309,7 @@ form.onsubmit = async function(e) {
         
     }
   }else{
+
     let ph = document.querySelector('.err')
     ph.classList.add('blerr')
     setTimeout(() => {
@@ -318,6 +319,7 @@ form.onsubmit = async function(e) {
 
 };
 form2.onsubmit = async function(e) {
+
   e.preventDefault();
  
   const name = document.querySelector('.name');

@@ -36,16 +36,16 @@ def create_counts(request):
 
 def send_message_mail(email,message):
     msg = MIMEMultipart('alternative')
-    msg['Subject'] = "Новая заявка"
-    msg['From'] = 'second@2nd.kz'
+    msg['Subject'] = "New application"
+    msg['From'] = 'second@unwanted.ae'
     msg['To'] = email
     part2 = MIMEText(message, 'html')
     msg.attach(part2)
     mail = smtplib.SMTP('smtp.mail.ru', 587)
     mail.ehlo()
     mail.starttls()
-    mail.login('second@2nd.kz', os.getenv('PASSWORD_MAIL'))
-    mail.sendmail('second@2nd.kz', email, msg.as_string())
+    mail.login('second@unwanted.ae', os.getenv('PASSWORD_MAIL'))
+    mail.sendmail('second@unwanted.ae', email, msg.as_string())
     mail.quit()
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
@@ -73,8 +73,8 @@ def create_orders(request):
             html_admin = send_admin_email(data['name'], data['phone'], data['adress'], data['type'])
             # html_client = send_client_email(data['name'], data['phone'], data['email'])
             ## send_message_mail(data['email'],html_client)
-            send_message_mail('second@2nd.kz',html_admin) 
-            send_message_mail('admin@2nd.kz',html_admin)
+            send_message_mail('second@unwanted.ae',html_admin) 
+            send_message_mail('admin@unwanted.ae',html_admin)
             return JsonResponse({'message': True})
         else:
             return JsonResponse({'message': False})
@@ -97,7 +97,7 @@ def create_orders_sotrud(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         if not  data['message']:
-            message = 'не указано'
+            message = 'not message'
         else:
             message = data['message']
         order = Works.objects.create(
@@ -109,7 +109,7 @@ def create_orders_sotrud(request):
         html_admin = send_admin_email_sotr(data['name'], data['phone'], data['email'], message)
         html_client = send_client_email(data['name'], data['phone'], data['email'])
         send_message_mail(data['email'],html_client)
-        send_message_mail('second@2nd.kz',html_admin)
+        send_message_mail('second@unwanted.ae',html_admin)
         
         return JsonResponse({'message': True})
 
@@ -134,7 +134,7 @@ def create_commands(request):
                 phone = data['phone']
                 )
         html_admin = send_admin_email_commands(data['name_user'], data['phone'], data['message_text'])
-        send_message_mail('second@2nd.kz',html_admin)
+        send_message_mail('second@unwanted.ae',html_admin)
         return JsonResponse({'message': True})
 
 def home_page(request):

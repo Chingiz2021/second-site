@@ -52,7 +52,7 @@ def send_admin_email(name, phone, email,types):
     </head>
     <body>
         <div class="header" style="background-color: #23164B;">
-            <img src="https://2nd.kz/static/images/logo1.png" alt="">
+            <img src="https://unwanted.ae/static/images/logo1.png" alt="">
         </div>
         <div class="text-email">
             <h3>Здравствуйте ,Уважаемый(ая) администратор!</h3>
@@ -128,22 +128,22 @@ def send_client_email(name, phone, email):
     </head>
     <body>
         <div class="header" style="background-color: #23164B;">
-            <img src="https://2nd.kz/static/images/logo1.png" alt="">
+            <img src="https://unwanted.ae/static/images/logo1.png" alt="">
         </div>
         <div class="text-email">
-            <h3>Здравствуйте ,Уважаемый(ая) {name}!</h3>
+            <h3>Hello Dear {name}!</h3>
             
-            <h4>Поступила новая заявка</h4>
+            <h4>New application received</h4>
             
             <div class="text-detail">
-                <p class="detail">Детали сообщения :</p>
-                <p><span>Ваше имя: </span> {name}</p>
-                <p><span>Ваш номер телефона: </span> {phone}</p>
-                <p><span>Ваш Email: </span> {email}</p>
-                <h4>Наш специалист свяжется с вами ближайшее время</h4>
+                <p class="detail">Message details :</p>
+                <p><span>Your name: </span> {name}</p>
+                <p><span>Your phone: </span> {phone}</p>
+                <p><span>Your Email: </span> {email}</p>
+                <h4>Our specialist will contact you shortly</h4>
             </div>
             <div>
-                <p>Желаем вам хорошего дня!</p>
+                <p>We wish you a good day!</p>
             </div>
         </div>
     </body>
@@ -203,7 +203,7 @@ def send_admin_email_sotr(name, phone, email,message):
     </head>
     <body>
         <div class="header" style="background-color: #23164B;">
-            <img src="https://2nd.kz/static/images/logo1.png" alt="">
+            <img src="https://unwanted.ae/static/images/logo1.png" alt="">
         </div>
         <div class="text-email">
             <h3>Здравствуйте ,Уважаемый(ая) администратор!</h3>
@@ -280,7 +280,7 @@ def send_admin_email_commands(name, phone,message):
     </head>
     <body>
         <div class="header" style="background-color: #23164B;">
-            <img src="https://2nd.kz/static/images/logo1.png" alt="">
+            <img src="https://unwanted.ae/static/images/logo1.png" alt="">
         </div>
         <div class="text-email">
             <h3>Здравствуйте ,Уважаемый(ая) администратор!</h3>

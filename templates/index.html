@@ -19,7 +19,7 @@ homepage
             <form class="form">
               <div class="nonel">
                 <div class="alert alert-danger" role="alert">
-                  Вы уже отправляли заявку!Мы вам перезвоним в ближайшее время!
+                  You have already sent an application! We will call you back soon! Thank you and have a nice day!
                 </div>
               </div>
 
@@ -29,19 +29,19 @@ homepage
               </div>
               <div class="mb-3">
 
-                <input id="phone" type="tel" required class="form-control phone" placeholder="Phone">
-                <span class="err">Укажите номер в указанном формате</span>
+                <input type="tel" required class="form-control phone " placeholder="Phone">
+                <span class="err">phone required</span>
               </div>
               <div class="mb-3">
                 <input required type="email" class="form-control email" placeholder="email" id="exampleInputEmail1">
               </div>
 
               <button type="submit" style="width: 100%;background-color: #23164B;" type="button"
-                class="btn btn-secondary">Send</button>
+                class="btn btn-secondary">Submit</button>
             </form>
             <form id="form2" class="form2 " style="min-height: 24em; padding: 1em;">
 
-              <p style="font-size: 20px;">Укажите <br>категорию вещей для вывоза</p>
+              <p style="font-size: 20px;">Please <br> specify your items</p>
               <div class="overflow-auto" style="height: 8em;">
 
 
@@ -55,39 +55,38 @@ homepage
                   <input onclick="onDrugoe9()" class="form-check-input od" type="checkbox" value=""
                     id="flexCheckDefault2">
                   <label class="form-check-label" for="flexCheckDefault">
-                    Одежду
+                    Clothes
                   </label>
                 </div>
                 <div class="form-check">
                   <input onclick="onDrugoe8()" class="form-check-input ob" type="checkbox" value=""
                     id="flexCheckDefault3">
                   <label class="form-check-label" for="flexCheckDefault">
-                    Обувь
+                    Shoes
                   </label>
                 </div>
                 <div class="form-check">
                   <input onclick="onDrugoe7()" class="form-check-input pos" type="checkbox" value=""
                     id="flexCheckDefault4">
                   <label class="form-check-label" for="flexCheckDefault">
-                    Посуду
+                    Dishes
                   </label>
                 </div>
                 <div class="form-check">
                   <input onclick="onDrugoe6()" class="form-check-input aks" type="checkbox" value=""
                     id="flexCheckDefault5">
                   <label class="form-check-label" for="flexCheckDefault">
-                    Аксессуары
+                    Furniture
                   </label>
                 </div>
                 <div class="form-check">
                   <input onclick="onDrugoe5()" class="form-check-input texn" type="checkbox" value=""
                     id="flexCheckDefault6">
                   <label class="form-check-label" for="flexCheckDefault">
-                    Бытовую
-                    технику
+                    Home Appliances
                   </label>
                 </div>
-                <div class="form-check">
+                <!-- <div class="form-check">
                   <input onclick="onDrugoe4()" class="form-check-input meb" type="checkbox" value=""
                     id="flexCheckDefault7">
                   <label class="form-check-label" for="flexCheckDefault">
@@ -114,12 +113,12 @@ homepage
                   <label class="form-check-label" for="flexCheckDefault">
                     Домашние принадлежности
                   </label>
-                </div>
+                </div> -->
                 <div class="form-check">
                   <input onclick="onDrugoe()" class="form-check-input  drugoe" type="checkbox" value=""
                     id="flexCheckDefault12">
                   <label class="form-check-label" for="flexCheckDefault">
-                    Другое
+                    Other
                   </label>
                 </div>
 
@@ -130,9 +129,9 @@ homepage
                     id="exampleInputEmail1">
                 </div>
               </div>
-              <span class="err2">Укажите категорию вещей</span>
+              <span class="err2">Please specify your items</span>
               <button type="submit" style="margin-top: 2em;width: 100%;background-color: #23164B;" type="button"
-                class="btn btn-secondary">Отправить</button>
+                class="btn btn-secondary">Submit</button>
             </form>
           </div>
         </div>
@@ -173,7 +172,7 @@ homepage
 
           <span style="text-align: inherit;position: relative;margin-top: 2em;font-size: 18px;font-weight: bold">In the
             modern world, the relationship between humans and the environment is more
-            important than ever. With Unwanted , you can learn about conscious consumption,
+            important than ever. With Unwanted, you can learn about conscious consumption,
             recycling, and how we can reduce our carbon footprint by up to 75% just by reusing an item!
             Let s work together to make sure our planet stays healthy for generations to come.</span>
           <p></p>
@@ -233,7 +232,7 @@ homepage
                 <span class="sp-w">2</span>
                 Our team coordinate the <br>
                 removal of your items at a time <br>
-                that s convenient for you <br> <span class="sp-w">2</span>
+                that is convenient for you <br> <span class="sp-w">2</span>
                 {% load static %}
                 <img class="img-fluid w-1" src="{% static 'images/w2.png' %}" alt="">
               </p>
@@ -333,7 +332,7 @@ homepage
             <div class="bb d-lg-block d-md-none d-none" style="text-align: left;display: flex;
                         flex-wrap: wrap;justify-content: end;
                         ">
-              <p class="text" style="width: 100%;">1.Underwear</p>
+              <p class="text" style="width: 100%;">1. Underwear</p>
               <p class="text" style="width: 100%;">2. Clothes and shoes in
                 poor conditions</p>
 
@@ -482,7 +481,7 @@ homepage
 
               Unwanted is a commercial project
               that exists and develops solely on the
-              proceeds from sales,
+              proceeds from sales.
               We strive to provide great services
               and products in order to make our
               business sustainable for the long term
@@ -502,7 +501,12 @@ homepage
               firmly believe in the power of
               collaboration, so if you have a project
               that could benefit from our support,
-              please don't hesitate <span style="color: black;"> to reach out!</span>
+              please don't hesitate <span style="color: black;"> <button style="    background: none;
+                border: none;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-whatever="@mdo"><a style="color: black; border-bottom: 2px solid currentColor; ">to reach out!
+                  </a> </button>
+                <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;font-size: 18px;">
+              </span>
 
             </p>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -510,22 +514,22 @@ homepage
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 style="color: #23164b;" class="modal-title" id="exampleModalLabel">Заявка на сотрудничество</h5>
+                    <h5 style="color: #23164b;" class="modal-title" id="exampleModalLabel">Application for cooperation
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <form id="form3" class="form3">
                       <div class="sotrm">
                         <div class="alert alert-success" role="alert">
-                          Завка успешно отправлена!
+                          successfully sent!
                         </div>
                       </div>
                       <div class="mb-3">
-                        <input required type="text" class="form-control names" placeholder="Имя">
+                        <input required type="text" class="form-control names" placeholder="Name">
                       </div>
                       <div class="mb-3">
-                        <input id="phone22" type="text" required class="form-control phone2"
-                          placeholder="Номер телефона">
+                        <input type="text" required class="form-control phone2" placeholder="Phone">
                       </div>
                       <div class="mb-3">
                         <input required type="email" class="form-control emails" placeholder="Email"
@@ -533,11 +537,11 @@ homepage
                       </div>
                       <div class="form-group">
 
-                        <textarea placeholder="Ваше сообщение" class="form-control message"
+                        <textarea placeholder="your message" class="form-control message"
                           id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
                       <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit"
-                        class="btn btn-primary">Отправить</button>
+                        class="btn btn-primary">Submit</button>
                     </form>
                   </div>
                 </div>
@@ -829,7 +833,7 @@ homepage
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 style="color: #23164b;" class="modal-title" id="exampleModalLabel">Комментарий</h5>
+                  <h5 style="color: #23164b;" class="modal-title" id="exampleModalLabel">Comment</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -840,16 +844,16 @@ homepage
                       </div>
                     </div>
                     <div class="mb-3">
-                      <input required type="text" class="form-control nameso" placeholder="Ваше Имя">
+                      <input required type="text" class="form-control nameso" placeholder="Full name">
                     </div>
 
                     <div class="form-group">
 
-                      <textarea required placeholder="Ваш отзыв" class="form-control messageso"
+                      <textarea required placeholder="Your review" class="form-control messageso"
                         id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit"
-                      class="btn btn-primary">Send</button>
+                      class="btn btn-primary">Submit</button>
                   </form>
                 </div>
               </div>
@@ -886,7 +890,7 @@ homepage
                 width: 100%;
             
                 text-align: center;">
-                  <a href="tel:+77077678676" class="text-flicker" style="text-decoration: none; color: #23164B;">
+                  <a href="tel:+971585272709" class="text-flicker" style="text-decoration: none; color: #23164B;">
                     {% load static %}
                     <img class="img-fluid" src="{% static 'images/phone.png' %}" alt=""> +971 58 527 27 09
                   </a>
@@ -921,7 +925,7 @@ homepage
                 text-align: center;">
                   {% load static %}
                   <img class="img-fluid" src="{% static 'images/geo.png' %}" alt="">
-                  <span> Казахстан, г. Алматы</span>
+                  <span> Dubai, UAE </span>
                 </p>
               </div>
             </div>
@@ -929,9 +933,10 @@ homepage
         </div>
         <div class="col-lg-6 col-12">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.1632571444343!2d76.94312591578596!3d43.26895547913633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f581bba36cb%3A0x6c74ca5e0538685f!2z0L_RgC3Rgi4g0J3QsNC30LDRgNCx0LDQtdCy0LAgMzYsINCQ0LvQvNCw0YLRiyAwNTAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sru!4v1632245723485!5m2!1sru!2sru"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.4112968688896!2d55.300205999999996!3d25.1555865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69270f5612c3%3A0x2d7e43041843e7d8!2sMeydan%20Free%20Zone!5e0!3m2!1sen!2sru!4v1674580918709!5m2!1sen!2sru"
             width="100%" height="620" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
+
         </div>
       </div>
   </section>
