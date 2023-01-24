@@ -5,510 +5,601 @@ homepage
 {% endspaceless %}{% endblock %}
 {% block header %}
 <header id="header" class="d-flex align-items-center justify-content-center">
-    <div class="container d-flex" style="align-items: center;min-height: 80vh;">
-        <div class="row">
-            <div class="col-12 col-lg-4 order-2 order-lg-1 box-form" style="position: relative;">
-                {% load static %}
-                <img style="position: absolute;
+  <div class="container d-flex" style="align-items: center;min-height: 80vh;">
+    <div class="row">
+      <div class="col-12 col-lg-4 order-2 order-lg-1 box-form" style="position: relative;">
+        {% load static %}
+        <img style="position: absolute;
                 max-width: 15em;
                 bottom: -8em;
                 left: -6em;" class="img-fluid" src="{% static 'images/form.png' %}" alt="">
-                <div class="card" style="width: 18rem;position: relative;
+        <div class="card" style="width: 18rem;position: relative;
                 height: max-content;">
-                    <div class="card-body">
-                        <form class="form">
-                          <div class="nonel">
-                            <div class="alert alert-danger" role="alert">
-                              Вы уже отправляли заявку!Мы вам перезвоним в ближайшее время!
-                           </div>
-                          </div>
-
-                            <p style="font-size: 20px;">Оставить заявку <br> на вывоз вещей</p>
-                            <div class="mb-3">
-                                <input required type="text" class="form-control name" placeholder="Имя">
-                            </div>
-                            <div class="mb-3">
-                           
-                              <input id="phone" type="tel"  required class="form-control phone" placeholder="Номер телефона">
-                              <span class="err">Укажите номер в указанном формате</span>
-                            </div>
-                            <div class="mb-3">
-                                <input required type="text" class="form-control email" placeholder="Адрес" id="exampleInputEmail1">
-                            </div>
-
-                            <button  type="submit" style="width: 100%;background-color: #23164B;" type="button"
-                                class="btn btn-secondary">Отправить</button>
-                        </form>
-                        <form id="form2" class="form2 " style="min-height: 24em; padding: 1em;">
-                        
-                            <p style="font-size: 20px;">Укажите <br>категорию вещей для вывоза</p>
-                            <div class="overflow-auto" style="height: 8em;">
-
-                            
-                            <div class="order-alert" >
-                                <div class="alert alert-success" role="alert" >
-                                    Завка успешно отправлена!
-                                  </div>
-                            </div>
-
-                            <div class="form-check" >
-                                <input onclick="onDrugoe9()" class="form-check-input od" type="checkbox" value="" id="flexCheckDefault2">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Одежду
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input onclick="onDrugoe8()" class="form-check-input ob" type="checkbox" value="" id="flexCheckDefault3">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Обувь
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input onclick="onDrugoe7()" class="form-check-input pos" type="checkbox" value="" id="flexCheckDefault4">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Посуду
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input onclick="onDrugoe6()" class="form-check-input aks" type="checkbox" value="" id="flexCheckDefault5">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Аксессуары
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input onclick="onDrugoe5()" class="form-check-input texn" type="checkbox" value="" id="flexCheckDefault6">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Бытовую
-                                    технику
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input onclick="onDrugoe4()" class="form-check-input meb" type="checkbox" value="" id="flexCheckDefault7">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Мебель
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input onclick="onDrugoe3()" class="form-check-input book" type="checkbox" value="" id="flexCheckDefault8">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Книги
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input onclick="onDrugoe2()" class="form-check-input zapas" type="checkbox" value="" id="flexCheckDefault9">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Запасные части
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input  onclick="onDrugoe1()" class="form-check-input  drugoe" type="checkbox" value="" id="flexCheckDefault11">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Домашние принадлежности
-                                </label>
-                              </div> 
-                              <div class="form-check">
-                                <input  onclick="onDrugoe()" class="form-check-input  drugoe" type="checkbox" value="" id="flexCheckDefault12">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Другое
-                                </label>
-                              </div> 
-
-                            </div>
-                            <div style="min-height: 2em;">
-                            <div style="margin-top: 1em;margin-bottom: 1em;" class="mess" id="mess">
-                                <input  type="text" class="form-control textmessage" placeholder="Введите тип вещей" id="exampleInputEmail1">
-                            </div>
-                        </div>
-                        <span class="err2">Укажите категорию вещей</span>
-                            <button  type="submit" style="margin-top: 2em;width: 100%;background-color: #23164B;" type="button"
-                                class="btn btn-secondary">Отправить</button>
-                        </form>
-                    </div>
+          <div class="card-body">
+            <form class="form">
+              <div class="nonel">
+                <div class="alert alert-danger" role="alert">
+                  Вы уже отправляли заявку!Мы вам перезвоним в ближайшее время!
                 </div>
-            </div>
-            <div class="col-12 col-lg-8 order-1 order-lg-2">
-                <div class="container left" style="font-weight: 500;position: relative;">
-                    {% load static %}
-                    <img class="img-h img-fluid" src="{% static 'images/h1.png' %}" alt="">
-                    <h1 class="hh1" style="position: relative;">Бесплатный сервис по вывозу ненужных вещей
-                    </h1>
-                    <p class="text-left  doxod">
-                        1/5 часть от дохода мы отправляем на <br> <span
-                            style="color: #EB5534;">благотворительность</span> от Вашего имени!
-                    </p>
+              </div>
+
+              <p style="font-size: 20px;">Send us a request <br> </p>
+              <div class="mb-3">
+                <input required type="text" class="form-control name" placeholder="Name">
+              </div>
+              <div class="mb-3">
+
+                <input id="phone" type="tel" required class="form-control phone" placeholder="Phone">
+                <span class="err">Укажите номер в указанном формате</span>
+              </div>
+              <div class="mb-3">
+                <input required type="email" class="form-control email" placeholder="email" id="exampleInputEmail1">
+              </div>
+
+              <button type="submit" style="width: 100%;background-color: #23164B;" type="button"
+                class="btn btn-secondary">Send</button>
+            </form>
+            <form id="form2" class="form2 " style="min-height: 24em; padding: 1em;">
+
+              <p style="font-size: 20px;">Укажите <br>категорию вещей для вывоза</p>
+              <div class="overflow-auto" style="height: 8em;">
+
+
+                <div class="order-alert">
+                  <div class="alert alert-success" role="alert">
+                    Success!
+                  </div>
                 </div>
-            </div>
+
+                <div class="form-check">
+                  <input onclick="onDrugoe9()" class="form-check-input od" type="checkbox" value=""
+                    id="flexCheckDefault2">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Одежду
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe8()" class="form-check-input ob" type="checkbox" value=""
+                    id="flexCheckDefault3">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Обувь
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe7()" class="form-check-input pos" type="checkbox" value=""
+                    id="flexCheckDefault4">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Посуду
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe6()" class="form-check-input aks" type="checkbox" value=""
+                    id="flexCheckDefault5">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Аксессуары
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe5()" class="form-check-input texn" type="checkbox" value=""
+                    id="flexCheckDefault6">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Бытовую
+                    технику
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe4()" class="form-check-input meb" type="checkbox" value=""
+                    id="flexCheckDefault7">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Мебель
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe3()" class="form-check-input book" type="checkbox" value=""
+                    id="flexCheckDefault8">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Книги
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe2()" class="form-check-input zapas" type="checkbox" value=""
+                    id="flexCheckDefault9">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Запасные части
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe1()" class="form-check-input  drugoe" type="checkbox" value=""
+                    id="flexCheckDefault11">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Домашние принадлежности
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input onclick="onDrugoe()" class="form-check-input  drugoe" type="checkbox" value=""
+                    id="flexCheckDefault12">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Другое
+                  </label>
+                </div>
+
+              </div>
+              <div style="min-height: 2em;">
+                <div style="margin-top: 1em;margin-bottom: 1em;" class="mess" id="mess">
+                  <input type="text" class="form-control textmessage" placeholder="Введите тип вещей"
+                    id="exampleInputEmail1">
+                </div>
+              </div>
+              <span class="err2">Укажите категорию вещей</span>
+              <button type="submit" style="margin-top: 2em;width: 100%;background-color: #23164B;" type="button"
+                class="btn btn-secondary">Отправить</button>
+            </form>
+          </div>
         </div>
+      </div>
+      <div class="col-12 col-lg-8 order-1 order-lg-2">
+        <div class="container left" style="font-weight: 500;position: relative;">
+          {% load static %}
+          <img class="img-h img-fluid" src="{% static 'images/h1.png' %}" alt="">
+          <h1 class="hh1" style="position: relative;">Free take out service of
+            any unnecessary items
+            you no longer need
+          </h1>
+          <p class="text-left  doxod">
+            Let’s make a difference in the
+
+            world together by donating
+
+            1/5 of our income to <br> <span style="color: #EB5534;">Charity!</span>
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </header>
 {% endblock %}
 {% block content %}
 
 <main id="main">
-    <section id="o-services" style="color:white;background-color: #EB5534;">
+  <section id="o-services" style="color:white;background-color: #EB5534;">
 
-        <div class="container d-flex " style="align-items: center;min-height: 80vh;">
-            <div class="row justify-content-center">
-                <h2 class="text-center h2h">О нашем сервисе
-                </h2>
-                <div class="col-12 " style="padding-top: 3em;position: relative;">
-                    {% load static %}
-                    <img  class="img-ser img-fluid d-none d-lg-block d-ms-block" src="{% static 'images/serv.png' %}" alt="">
-                    
-                      <span style="text-align: inherit;position: relative;margin-top: 2em;font-size: 18px;">- Давно хотели перебрать шкаф, но не знаете, куда деть ненужную одежду?</span>  <p></p>
-                      <span style="text-align: inherit;position: relative;margin-top: 5em;font-size: 18px;"> - Вы переезжаете и не знаете что сделать со старым ковром и сервантом?</span>  <p></p>
-                      <span style="text-align: inherit;position: relative;margin-top: 2em;font-size: 18px;">- Хотите освободить место где-то в гараже, убрав старый телевизор?</span> 
-                    </p>
-                    <p style="margin-top: 46px;text-align: inherit;position: relative;font-weight: bold;font-size: 18px;">
-                      Наш сервис избавит Вас от этой головной боли, мы совершенно бесплатно
-                       вывезем ненужные вам вещи и даже заплатим за них небольшую сумму.
-                    </p>
-                    <div style="margin-top: 46px;text-align: inherit;position: relative;">
-                     <span style="font-size: 18px;"> Пользуясь услугами Second, Вы бесплатно и безопасно утилизируете одежду и ненужные вещи,
-                       чем поможете планете очиститься.</span> <br> <p></p> <span style="font-size: 18px;"> Ежегодно на
-                      свалках оказываются вещи, которые могли бы послужить новому владельцу ещё не один год. </span>
-                       </div>
-                   
-                </div>
-            </div>
+    <div class="container d-flex " style="align-items: center;min-height: 80vh;">
+      <div class="row justify-content-center">
+        <h2 class="text-center h2h">About our service
+        </h2>
+        <div class="col-12 " style="padding-top: 3em;position: relative;">
+          {% load static %}
+          <img class="img-ser img-fluid d-none d-lg-block d-ms-block" src="{% static 'images/serv.png' %}" alt="">
+
+          <span style="text-align: inherit;position: relative;margin-top: 2em;font-size: 18px;font-weight: bold">In the
+            modern world, the relationship between humans and the environment is more
+            important than ever. With Unwanted , you can learn about conscious consumption,
+            recycling, and how we can reduce our carbon footprint by up to 75% just by reusing an item!
+            Let s work together to make sure our planet stays healthy for generations to come.</span>
+          <p></p>
+
+          </p>
+          <p style="margin-top: 46px;text-align: inherit;position: relative;font-weight: bold;font-size: 18px;">
+            After sorting, we give some of the things to those in need or sell them in second hand
+            stores or partners, while others are sent for recycling.
+          </p>
+          <p style="margin-top: 46px;text-align: inherit;position: relative;font-weight: bold;font-size: 18px;">
+            After sorting, we give some of the things to those in need or sell them in second hand
+            stores or partners, while others are sent for recycling.
+          </p>
+          <div style="margin-top: 46px;text-align: inherit;position: relative;">
+            <span style="font-size: 18px;font-weight: bold"> We re committed to making sure our planet stays clean and
+              healthy, which is why we strive to
+              inform you on how to part with your unnecessary items with minimal harm to the
+              environment. <span style="color:#23164B">When we give items a second life, we not only prolong their life
+                cycle but also
+                help protect our environment in the process.</span> </span>
+          </div>
+          <div style="margin-top: 46px;text-align: inherit;position: relative;">
+            <span style="font-size: 18px;font-weight: bold"> With small steps, we can change the planet for the better.
+              <span style="color:#23164B"> But it's up to you to decide which
+                direction that will be!</span> </span>
+          </div>
         </div>
-    </section>
-
-    <section id="works">
-
-        <div class="container d-flex" style="align-items: center;min-height: 80vh;justify-content: center;">
-
-            <div class="row justify-content-center">
-                <h2 class="text-center " style="margin-top: 3em;">Как это работает?
-                </h2>
-                <div class="col-12 col-lg-6 d-flex" style="padding-top: 3em;align-items: center;justify-content: center;">
-                    <div >
-                    <div style="width: 100%;position: relative;min-height: 5em;">
-                        
-                        <p style="position: relative;color: #23164B;">
-                            <span class="sp-w">1</span>
-                            Вы оставляете заявку на сайте или  <br> по номеру телефона
-                            {% load static %}
-                            <img class="img-fluid w-1" src="{% static 'images/w1.png' %}" alt="">
-                        </p>
- 
-                    </div>
-                    <div  style="width: 100%;position: relative;min-height: 5em;margin-top: 3em;">
-                        <p style="position: relative;color: #23164B;" >
-                            <span class="sp-w">2</span>
-                            Мы приезжаем  <br> на указанный Вами адрес  <br> <span class="sp-w">2</span> и забираем вещи
-                            {% load static %}
-                            <img class="img-fluid w-1" src="{% static 'images/w2.png' %}" alt="">
-                        </p>
-                    </div>
-                    <div  style="width: 100%;position: relative;min-height: 5em;margin-top: 3em;">
-                        <p style="position: relative;color: #23164B;">
-                            <span class="sp-w">3</span>
-                            Вы избавляетесь  <br> 
-                            от ненужных вещей,  <br>
-                            мы находим им применение
-                            {% load static %}
-                            <img class="img-fluid w-1" src="{% static 'images/w2.png' %}" alt="">
-                        </p>
-                    </div>
-                </div>
-                </div>
-                <div class="col-12 col-lg-6" style="padding-top: 3em;">
-                    {% load static %}
-                    <img class="img-fluid" src="{% static 'images/work.png' %}" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" >
-        <div class="d-flex flex-wrap bd-highlight">
-            <div style="margin: 0;padding: 0;" class="flex-grow-1 bd-highlight box-about">
-                {% load static %}
-                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sectionabout.png' %}" alt="">
-            </div>
-            <div id="box2" 
-                class="flex-grow-1 bd-highlight box-about ">
-                <div style="height: 100%; display: flex;align-items: center;justify-content: center;">
-
-
-
-                    <h4 class="hh4">
-                      Мы забираем ненужные Вам вещи, сортируем их,
-                      затем часть продаём, часть отдаём нуждающимся,
-                      а что-то отправляем на реставрацию.
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="priem" style="color: #23164B;">
-        <div class="container d-flex flex-wrap" style="align-items: center;min-height: 80vh;justify-content: center;position: relative;">
-
-            {% load static %}
-            <img class="img-fluid neprin d-none d-lg-block" src="{% static 'images/neprim.png' %}" alt="">
-            <h2 class="text-center h2h">Мы принимаем
-            </h2>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-6 text-center" style="padding-top: 3em;position: relative;display: flex;
-                    justify-content: end;">
-                      <div class="ww" style="text-align: left;display: flex;
-                      flex-wrap: wrap;
-                      justify-content: end;">
-                        {% load static %}
-                        <img class="img-fluid prin" src="{% static 'images/prin.png' %}" alt="">
-                        <p class="text" style="width: 100%;">1. Одежду</p>
-                        <p class="text" style="width: 100%;">2. Обувь</p>
-                        <p class="text" style="width: 100%;">3. Посуду</p>
-                        <p class="text" style="width: 100%;">4. Аксессуары</p>
-                        <p class="text" style="width: 100%;">5. Бытовую <br> технику</p>
-                    </div>
-                    </div>
-                    <div class="col-6 " style="padding-top: 3em;">
-                        <p class="text">6. Мебель</p>
-                         <p class="text">7. Книги</p>
-                         <p class="text">8. Запасные части</p>
-                         <p class="text">9. Домашние принадлежности</p>
-                         <p class="text">10. Прочие вещи</p>
-                    </div>
-                </div>
-            </div>
-            <h2 class="text-center h2h" style="margin-top: 3em;position: relative;">Мы не принимаем
-            </h2>
-            <div class="container" style="padding-bottom: 3em;">
-                <div class="row justify-content-center">
-                    <div class="col-6 text-center" style="padding-top: 3em;display: flex;
-                    justify-content: end;">
-                        <div  class="bb d-lg-block d-md-none d-none" style="text-align: left;display: flex;
-                        flex-wrap: wrap;justify-content: end;
-                        ">
-                        <p class="text" style="width: 100%;">1.Нижнее белье</p>
-                        <p class="text" style="width: 100%;">2. Обувь и одежду в плохом состоянии</p>
-                        <p class="text" style="width: 100%;">3. Носки, колготки</p>
-                      </div>
-                    <div  class="d-lg-none d-md-block d-block" style="text-align: left;display: flex;
-                    flex-wrap: wrap;justify-content: start;
-                    ">
-                    <p class="text" style="width: 100%;">1.Нижнее белье</p>
-                    <p class="text" style="width: 100%;">2. Обувь и одежду в плохом состоянии</p>
-                    <p class="text d-lg-block d-none" style="width: 100%;">3. Носки, колготки</p>
-                </div>
-                    </div>
-                    <div class="col-6 " style="padding-top: 3em;">
-                      <p class="text d-lg-none d-block" style="width: 100%;">3. Носки, колготки</p>
-                         <p class="text d-lg-block d-none">4. Вещи с пятнами, плесенью и плохим запахом</p>
-                         <p class="text d-lg-block d-none">5. Строительный мусор</p>
-                         <p class="text d-lg-none d-block ">4. Строительный мусор</p>
-                         <p class="text d-none d-lg-block">6.Производственные и бытовые отходы</p>
-                    </div>
-                    <div class="col-12 d-lg-none d-block text-center">
-                      <p class="text">5.Вещи с пятнами, плесенью и плохим запахом</p>
-                    </div>
-                    <div class="col-12 d-lg-none d-block text-center">
-                      <p class="text">6.Производственные и бытовые отходы</p>
-                    </div>
-                    <div class="text-center d-lg-none d-block">
-                      <p class="text">7.Медикаменты, препараты, лекарства</p>
-                    </div>
-                    <div class="text-center d-lg-block d-none">
-                      <p class="text">7.Медикаменты, препараты, лекарства</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sorts" style="background: #eb5534">
-        <div class="d-flex flex-wrap bd-highlight">
-
-            <div id="box2" style="background-color: #EB5534;margin: 0;padding: 0;min-height: 60vh;"
-                class="flex-grow-1 bd-highlight box-about ">
-                <div style="height: 100%; display: flex;align-items: center;justify-content: center;">
-
-
-
-                    <h4 style="color:white;text-align: inherit;width: 13em;">
-                      Мы отсортируем, приведем в рабочее состояние,  <br> <span style="color:#23164B">затем подарим вторую жизнь вещам.</span> 
-                    </h4>
-                </div>
-            </div>
-            <div style="margin: 0;padding: 0;background: #eb5534;display: flex;
-            align-items: center;
-    justify-content: center;" class="flex-grow-1 bd-highlight box-about" >
-                {% load static %}
-                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sort.png' %}" alt="">
-            </div>
-        </div>
-    </section>
-<section id="other" class="d-lg-block d-md-none d-none" style="position: relative;padding: 1em;">
-    <div class="row">
-<div class="col-12 col-lg-6" style="min-height: 70vh;position: relative;">
-    <p class="p1">
-      Пользуясь услугами Second, <br> Вы с заботой поддерживаете благородную предпринимательскую инициативу  и помогаете нам развиваться.
-    </p>
-    {% load static %}
-    <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g0.png' %}" alt="">
-</div>
-    
-
-<div class="col-12 col-lg-6" style="min-height: 70vh;position: relative;">
-   
-  
-    <p class="p2">
-
-      Мы верим <br>в разумное и осознанное потребление.  А также в баланс между личным комфортом и пользой для планеты.
-    </p>
-    {% load static %}
-    <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g1.png' %}" alt="">
-</div>
-</div>
-</section>
-<section id="other2" class="d-lg-none d-md-block d-block">
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-12">
-            <p style="color: #23164B;
-            text-align: center;
-            font-size: 1.4em;
-            margin-top: 3em;font-weight: 500;">
-                Пользуясь услугами Second, <br> Вы с заботой поддерживаете благородную предпринимательскую инициативу  и помогаете нам развиваться.
-            </p>
-        </div>
-        <div class="col-12 col-md-12">
-            {% load static %}
-            <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g0.png' %}" alt="">
-        </div>
-        <div class="col-12 col-md-12">
-            <p style="color: #23164B;
-            text-align: center;
-            font-size: 1.4em;
-            margin-top: 3em;font-weight: 500;">
-
-Мы верим <br>в разумное и осознанное потребление.  А также в баланс между личным комфортом и пользой для планеты.
-            </p>
-        </div>
-        <div class="col-12 col-md-12">
-            {% load static %}
-            <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g1.png' %}" alt="">
-        </div>
-    </div>
-</div>
-</section>
-    <section id="sort">
-        <div class="d-flex flex-wrap bd-highlight">
-
-
-            <div style="margin: 0;padding: 0;" class="flex-grow-1 bd-highlight box-about">
-                {% load static %}
-                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sec.png' %}" alt="">
-            </div>
-            <div id="box2" style="background-color: #A9AB49;margin: 0;padding: 0;min-height: 60vh;"
-                class="flex-grow-1 bd-highlight box-about ">
-                <div style="height: 100%; display: flex;align-items: center;justify-content: center;flex-wrap: wrap;">
-                    <div style="padding:1em;color: white;font-weight: 500;">
-<!--  -->
-                    <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;font-size: 18px;">
-
-                      Мы не просим денег на развитие у государства и фондов, а стараемся самостоятельно выйти на окупаемость нашего дела. Более того, часть вырученных средств мы отправляем на благотворительность нуждающимся семьям.
-
-                    </p>
-                    <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;font-size: 18px;">
-                      Наш проект открыт к сотрудничеству и новым социальным партнёрствам. Если же у Вас есть идеи в развитии этого направления, пишите  <button style="    background: none;
-                        border: none;" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><a  style="color: black; border-bottom: 2px solid currentColor; ">сюда</a> </button>
- <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;font-size: 18px;">
-
-  Присоединяйтесь, вместе мы сможем <span style="color: black;">сделать мир комфортнее и безопаснее!</span> 
-
-</p>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 style="color: #23164b;" class="modal-title" id="exampleModalLabel">Заявка на сотрудничество</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="form3" class="form3">
-            <div class="sotrm" >
-                <div class="alert alert-success" role="alert" >
-                    Завка успешно отправлена!
-                  </div>
-            </div>
-            <div class="mb-3">
-                <input required type="text" class="form-control names" placeholder="Имя">
-            </div>
-            <div class="mb-3">
-                <input id="phone22" type="text" required class="form-control phone2" placeholder="Номер телефона">
-            </div>
-            <div class="mb-3">
-                <input required type="email" class="form-control emails" placeholder="Email" id="exampleInputEmail1">
-            </div>
-            <div class="form-group">
-                
-                <textarea placeholder="Ваше сообщение" class="form-control message" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-          <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit" class="btn btn-primary">Отправить</button>
-        </form>
       </div>
     </div>
-  </div>
-                    </p>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </section>
 
-<section id="comments">
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Комментарий</h5>
-              <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <section id="works">
+
+    <div class="container d-flex"
+      style="align-items: center;min-height: 80vh;justify-content: center;;font-weight: bold">
+
+      <div class="row justify-content-center">
+        <h2 class="text-center " style="margin-top: 3em;">How it works?
+        </h2>
+        <div class="col-12 col-lg-6 d-flex"
+          style="padding-top: 3em;align-items: center;justify-content: center;font-size: 18px;">
+          <div>
+            <div style="width: 100%;position: relative;min-height: 5em;">
+
+              <p style="position: relative;color: #23164B;">
+                <span class="sp-w">1</span>
+                Send us a request and we will <br>
+                work with you to ensure all items <br>
+                safely and sustainably removed
+                {% load static %}
+                <img class="img-fluid w-1" src="{% static 'images/w1.png' %}" alt="">
+              </p>
+
             </div>
-            <div class="modal-body bodys">
-              
+            <div style="width: 100%;position: relative;min-height: 5em;margin-top: 3em;">
+              <p style="position: relative;color: #23164B;">
+                <span class="sp-w">2</span>
+                Our team coordinate the <br>
+                removal of your items at a time <br>
+                that s convenient for you <br> <span class="sp-w">2</span>
+                {% load static %}
+                <img class="img-fluid w-1" src="{% static 'images/w2.png' %}" alt="">
+              </p>
+            </div>
+            <div style="width: 100%;position: relative;min-height: 5em;margin-top: 3em;">
+              <p style="position: relative;color: #23164B;">
+                <span class="sp-w">3</span>
+                You get rid of items quickly <br>
+                and easily without having to <br>
+                worry about the cost
+                {% load static %}
+                <img class="img-fluid w-1" src="{% static 'images/w2.png' %}" alt="">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6" style="padding-top: 3em;">
+          {% load static %}
+          <img class="img-fluid" src="{% static 'images/work.png' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="d-flex flex-wrap bd-highlight">
+      <div style="margin: 0;padding: 0;" class="flex-grow-1 bd-highlight box-about">
+        {% load static %}
+        <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sectionabout.png' %}" alt="">
+      </div>
+      <div id="box2" class="flex-grow-1 bd-highlight box-about ">
+        <div style="height: 100%; display: flex;align-items: center;justify-content: center;flex-direction: column;">
+
+
+
+          <h4 class="hh4">
+            We are able to
+            come and pick up
+            any unnecessary
+
+            items from your
+            apartment, garage,
+            or office.
+          </h4>
+          <div>
+            <h4 class="hh4" style="margin-top: 4em;">
+              Let us know what
+              you need removed
+
+              and we'll do our
+              best to help!
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="priem" style="color: #23164B;">
+    <div class="container d-flex flex-wrap"
+      style="align-items: center;min-height: 80vh;justify-content: center;position: relative;">
+
+      {% load static %}
+      <img class="img-fluid neprin d-none d-lg-block" src="{% static 'images/neprim.png' %}" alt="">
+      <h2 class="text-center h2h">We Accept:
+      </h2>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6 text-center" style="padding-top: 3em;position: relative;display: flex;
+                    justify-content: end;">
+            <div class="ww" style="text-align: left;display: flex;
+                      flex-wrap: wrap;
+                      justify-content: end;">
+              {% load static %}
+              <img class="img-fluid prin" src="{% static 'images/prin.png' %}" alt="">
+              <p class="text" style="width: 100%;">1. Clothes</p>
+              <p class="text" style="width: 100%;">2. Shoes</p>
+              <p class="text" style="width: 100%;">3. Dishes</p>
+              <p class="text" style="width: 100%;">4. Home Appliances</p>
+              <p class="text" style="width: 100%;">5. Devices and <br> equipments</p>
+            </div>
+          </div>
+          <div class="col-6 " style="padding-top: 3em;">
+            <p class="text">6. Furniture</p>
+            <p class="text">7. Books</p>
+            <p class="text">8. Spare parts</p>
+            <p class="text">9. Household supplies</p>
+            <p class="text">10. Other items</p>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-center h2h" style="margin-top: 3em;position: relative;">We do not Accept:
+      </h2>
+      <div class="container" style="padding-bottom: 3em;">
+        <div class="row justify-content-center">
+          <div class="col-6 text-center" style="padding-top: 3em;display: flex;
+                    justify-content: end;">
+            <div class="bb d-lg-block d-md-none d-none" style="text-align: left;display: flex;
+                        flex-wrap: wrap;justify-content: end;
+                        ">
+              <p class="text" style="width: 100%;">1.Underwear</p>
+              <p class="text" style="width: 100%;">2. Clothes and shoes in
+                poor conditions</p>
+
+            </div>
+            <div class="d-lg-none d-md-block d-block" style="text-align: left;display: flex;
+                    flex-wrap: wrap;justify-content: start;
+                    ">
+              <p class="text" style="width: 100%;">1.Underwear</p>
+              <p class="text" style="width: 100%;">2. Clothes and shoes in
+                poor conditionsи</p>
+              <p class="text d-lg-block d-none" style="width: 100%;">3. Socks and tights</p>
+            </div>
+          </div>
+          <div class="col-6 " style="padding-top: 3em;">
+            <p class="text k" style="width: 100%;">3. Socks and tights</p>
+            <p class="text ">4. Construction garbage</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sorts" style="background: #eb5534">
+    <div class="d-flex flex-wrap bd-highlight">
+
+      <div id="box2" style="background-color: #EB5534;margin: 0;padding: 0;min-height: 60vh;"
+        class="flex-grow-1 bd-highlight box-about ">
+        <div style="height: 100%; display: flex;align-items: center;justify-content: center;">
+
+
+
+          <h4 style="color:white;text-align: inherit;width: 13em;">
+            We will sort, put into
+            working condition,
+
+            then give a second
+            life to items wherever
+            possible. <br> <span style="color:#23164B">Our goal is
+              to make sure nothing
+              goes to waste!</span>
+          </h4>
+        </div>
+      </div>
+      <div style="margin: 0;padding: 0;background: #eb5534;display: flex;
+            align-items: center;
+    justify-content: center;" class="flex-grow-1 bd-highlight box-about">
+        {% load static %}
+        <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sort.png' %}" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="other" class="d-lg-block d-md-none d-none" style="position: relative;padding: 1em;">
+    <div class="row">
+      <div class="col-12 col-lg-6" style="min-height: 70vh;position: relative;">
+        <p class="p1">
+          By using our service, you are
+          helping to our belief
+          in private initiative and
+          social entrepreneurship.
+        </p>
+        {% load static %}
+        <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g0.png' %}" alt="">
+      </div>
+
+
+      <div class="col-12 col-lg-6" style="min-height: 70vh;position: relative;">
+
+
+        <p class="p2">
+
+          We share a dream of a world where
+          there is a balance between
+
+          consumption and care for the
+          environment and personal needs.
+
+          We strive to create solutions that
+          respect both nature and people,
+
+          so everyone can thrive together.
+        </p>
+        {% load static %}
+        <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g1.png' %}" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="other2" class="d-lg-none d-md-block d-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <p style="color: #23164B;
+            text-align: center;
+            font-size: 1.4em;
+            margin-top: 3em;font-weight: 500;">
+            By using our service, you are
+            helping to our belief
+            in private initiative and
+            social entrepreneurship.
+          </p>
+        </div>
+        <div class="col-12 col-md-12">
+          {% load static %}
+          <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g0.png' %}" alt="">
+        </div>
+        <div class="col-12 col-md-12">
+          <p style="color: #23164B;
+            text-align: center;
+            font-size: 1.4em;
+            margin-top: 3em;font-weight: 500;">
+
+            We share a dream of a world where
+            there is a balance between
+
+            consumption and care for the
+            environment and personal needs.
+
+            We strive to create solutions that
+            respect both nature and people,
+
+            so everyone can thrive together.
+          </p>
+        </div>
+        <div class="col-12 col-md-12">
+          {% load static %}
+          <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/g1.png' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sort">
+    <div class="d-flex flex-wrap bd-highlight">
+
+
+      <div style="margin: 0;padding: 0;" class="flex-grow-1 bd-highlight box-about">
+        {% load static %}
+        <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/sec.png' %}" alt="">
+      </div>
+      <div id="box2" style="background-color: #A9AB49;margin: 0;padding: 0;min-height: 60vh;"
+        class="flex-grow-1 bd-highlight box-about ">
+        <div style="height: 100%; display: flex;align-items: center;justify-content: center;flex-wrap: wrap;">
+          <div style="padding:1em;color: white;font-weight: 500;">
+            <!--  -->
+            <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;font-size: 18px;">
+
+              Unwanted is a commercial project
+              that exists and develops solely on the
+              proceeds from sales,
+              We strive to provide great services
+              and products in order to make our
+              business sustainable for the long term
+              <span style="color: #23164B;">
+                without taking
+                money from the state or institutions.
+              </span>
+            </p>
+            <p class="tts text-md-center text-lg-start text-center" style="margin-top: 64px;font-size: 18px;">
+              We strive to provide great services
+              and products in order to make our
+              business sustainable for the long term
+
+              We cooperate with charitable
+              organizations in several areas and are
+              always open to new partnerships. We
+              firmly believe in the power of
+              collaboration, so if you have a project
+              that could benefit from our support,
+              please don't hesitate <span style="color: black;"> to reach out!</span>
+
+            </p>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 style="color: #23164b;" class="modal-title" id="exampleModalLabel">Заявка на сотрудничество</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="form3" class="form3">
+                      <div class="sotrm">
+                        <div class="alert alert-success" role="alert">
+                          Завка успешно отправлена!
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input required type="text" class="form-control names" placeholder="Имя">
+                      </div>
+                      <div class="mb-3">
+                        <input id="phone22" type="text" required class="form-control phone2"
+                          placeholder="Номер телефона">
+                      </div>
+                      <div class="mb-3">
+                        <input required type="email" class="form-control emails" placeholder="Email"
+                          id="exampleInputEmail1">
+                      </div>
+                      <div class="form-group">
+
+                        <textarea placeholder="Ваше сообщение" class="form-control message"
+                          id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                      <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit"
+                        class="btn btn-primary">Отправить</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              </p>
             </div>
           </div>
         </div>
       </div>
-<div class="container">
-    <h2 class="text-center" style="padding-top: 3em;">Отзывы</h2>
-    <div class="row">
+  </section>
+
+  <section id="comments">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Comment</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bodys">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="text-center" style="padding-top: 3em;">Reviews</h2>
+      <div class="row">
         <div class="col-12 d-lg-block d-md-none d-none">
-            <div class="row">
-              {% for object in comments|slice:":3" %}
-              <div class="col-lg-4">
+          <div class="row">
+            {% for object in comments|slice:":3" %}
+            <div class="col-lg-4">
 
-                  <div style="position: relative;">
-                    {% load static %}
-                    <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
-                    <div class="cards" >
+              <div style="position: relative;">
+                {% load static %}
+                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
+                <div class="cards">
 
-                        <div class="card-body">
-                          <p  class="card-title">{{object.name_user}}
-                            <br>
-                            {% load static %}
-                          <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
-                        </p>
-                        
-                          <p  class="card-text d-none">{{object.message_text}}</p>
-                          <p  class="card-texts ">{{object.message_text|slice:":65"}}...</p>
-                          <button  onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            <span style="font-size: .7em;" href="#" >читать полностью</span>
-                          </button>
-                          
-                        </div>
-                      </div>
+                  <div class="card-body">
+                    <p class="card-title">{{object.name_user}}
+                      <br>
+                      {% load static %}
+                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
+                    </p>
+
+                    <p class="card-text d-none">{{object.message_text}}</p>
+                    <p class="card-texts ">{{object.message_text|slice:":65"}}...</p>
+                    <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop">
+                      <span style="font-size: .7em;" href="#">Read more</span>
+                    </button>
+
+                  </div>
                 </div>
-               
-
               </div>
-              {% endfor %}
+
+
             </div>
-            <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="min-height: 40vh;position: relative;margin-top: 4em;
+            {% endfor %}
+          </div>
+          <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="min-height: 40vh;position: relative;margin-top: 4em;
             ">
                 <div class="carousel-indicator">
                
@@ -619,111 +710,122 @@ homepage
         </div>
 
         <div class="col-12 d-lg-none d-md-block d-block">
-            <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" style="min-height: 45vh;position: relative;margin-top: 4em;
+          <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" style="min-height: 45vh;position: relative;margin-top: 4em;
             ">
-                <div class="carousel-indicator" style="min-height: 25px;">
-               
-                  <button style="margin: 10px;padding: 0;"  onclick="activefunc(this)"   data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active1" aria-current="true"></button>
-                  <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"   data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" class="active2"  ></button>
-                  <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"  data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"  class="active3" ></button>
-                  
+            <div class="carousel-indicator" style="min-height: 25px;">
+
+              <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"
+                data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active1"
+                aria-current="true"></button>
+              <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"
+                data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" class="active2"></button>
+              <button style="margin: 10px;padding: 0;" onclick="activefunc(this)"
+                data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" class="active3"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  {% for object in comments|slice:":1" %}
+                  <div class="col-12  d-flex justify-content-center">
+                    <div style="position: relative;">
+                      {% load static %}
+                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
+                      <div class="cards">
+
+                        <div class="card-body">
+                          <p style="font-size: 1em;" class="card-title">{{object.name_user}}
+                            <br>
+                            {% load static %}
+                            <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}"
+                              alt="">
+                          </p>
+
+                          <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
+                          <p style="font-size: 1em;" class="card-texts ">{{object.message_text|slice:":100"}}...</p>
+                          <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <span style="font-size: .7em;" href="#">Read more</span>
+                          </button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
                 </div>
 
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <div class="row justify-content-center">
-                        {% for object in comments|slice:":1" %}
-                          <div class="col-12  d-flex justify-content-center">
-                            <div style="position: relative;">
-                                {% load static %}
-                                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
-                                <div class="cards" >
-    
-                                    <div class="card-body">
-                                      <p style="font-size: 1em;" class="card-title">{{object.name_user}}
-                                        <br>
-                                        {% load static %}
-                                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
-                                    </p>
-                                    
-                                      <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
-                                      <p style="font-size: 1em;"  class="card-texts ">{{object.message_text|slice:":100"}}...</p>
-                                      <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        <span style="font-size: .7em;" href="#" >читать полностью</span>
-                                      </button>
-                                      
-                                    </div>
-                                  </div>
-                            </div>
-                          </div>
-                          {% endfor %}
-                      </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  {% for object in comments|slice:"1:2" %}
+                  <div class="col-12  d-flex justify-content-center">
+                    <div style="position: relative;">
+                      {% load static %}
+                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
+                      <div class="cards">
 
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        {% for object in comments|slice:"1:2" %}
-                        <div class="col-12  d-flex justify-content-center">
-                            <div style="position: relative;">
-                                {% load static %}
-                                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
-                                <div class="cards" >
-    
-                                    <div class="card-body">
-                                      <p style="font-size: 1em;" class="card-title">{{object.name_user}}
-                                        <br>
-                                        {% load static %}
-                                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
-                                    </p>
-                                      
-                                    <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
-                                    <p style="font-size: 1em;"  class="card-texts ">{{object.message_text|slice:":100"}}...</p>
-                                      <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        <span style="font-size: .7em;" href="#" >читать полностью</span>
-                                      </button>
-                                      
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        {% for object in comments|slice:"2:3" %}
-                        <div class="col-12  d-flex justify-content-center">
-                            <div style="position: relative;">
-                                {% load static %}
-                                <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
-                                <div class="cards" >
-    
-                                    <div class="card-body">
-                                      <p style="font-size: 1em;" class="card-title">{{object.name_user}}
-                                        <br>
-                                        {% load static %}
-                                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}" alt="">
-                                    </p>
-                                      
-                                    <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
-                                    <p style="font-size: 1em;"  class="card-texts ">{{object.message_text|slice:":100"}}...</p>
-                                      <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        <span style="font-size: .7em;" href="#" >читать полностью</span>
-                                      </button>
-                                      
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                      </div>
-                  </div>
+                        <div class="card-body">
+                          <p style="font-size: 1em;" class="card-title">{{object.name_user}}
+                            <br>
+                            {% load static %}
+                            <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}"
+                              alt="">
+                          </p>
 
+                          <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
+                          <p style="font-size: 1em;" class="card-texts ">{{object.message_text|slice:":100"}}...</p>
+                          <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <span style="font-size: .7em;" href="#">Read more</span>
+                          </button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
                 </div>
               </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  {% for object in comments|slice:"2:3" %}
+                  <div class="col-12  d-flex justify-content-center">
+                    <div style="position: relative;">
+                      {% load static %}
+                      <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/comm.png' %}" alt="">
+                      <div class="cards">
+
+                        <div class="card-body">
+                          <p style="font-size: 1em;" class="card-title">{{object.name_user}}
+                            <br>
+                            {% load static %}
+                            <img style="margin:0;padding:0;" class="img-fluid" src="{% static 'images/vect.png' %}"
+                              alt="">
+                          </p>
+
+                          <p style="font-size: 1em;" class="card-text d-none">{{object.message_text}}</p>
+                          <p style="font-size: 1em;" class="card-texts ">{{object.message_text|slice:":100"}}...</p>
+                          <button onclick="onTextComment(this)" type="button" class="btn" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <span style="font-size: .7em;" href="#">Read more</span>
+                          </button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
         <div class="text-center mt-4 " style="margin-bottom: 4em;">
-          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
@@ -732,64 +834,70 @@ homepage
                 </div>
                 <div class="modal-body">
                   <form id="myform" class="myform">
-                    <div class="sotrmes text-center" >
-                        <div class="alert alert-success" role="alert" >
-                            Комментарий успешно отправлен!
-                          </div>
+                    <div class="sotrmes text-center">
+                      <div class="alert alert-success" role="alert">
+                        Success!
+                      </div>
                     </div>
                     <div class="mb-3">
-                        <input required type="text" class="form-control nameso" placeholder="Ваше Имя">
+                      <input required type="text" class="form-control nameso" placeholder="Ваше Имя">
                     </div>
-                   
+
                     <div class="form-group">
-                        
-                        <textarea required placeholder="Ваш отзыв" class="form-control messageso" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                  <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit" class="btn btn-primary">Отправить</button>
-                </form>
+
+                      <textarea required placeholder="Ваш отзыв" class="form-control messageso"
+                        id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button style="width: 100%;background-color: #23164B;color: white;margin-top: 3em;" type="submit"
+                      class="btn btn-primary">Send</button>
+                  </form>
+                </div>
               </div>
             </div>
-            </div>
           </div>
-          <button data-bs-toggle="modal" data-bs-target="#exampleModal4" data-bs-whatever="@mdo" style="background-color: #EB5534;color: white;" type="button" class="btn btn-cars">Написать отзыв</button>
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal4" data-bs-whatever="@mdo"
+            style="background-color: #EB5534;color: white;" type="button" class="btn btn-cars">Rate and review</button>
         </div>
-        
-    </div>
-</div>
-</section>
 
-<section id="contacts">
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
     <div class="container ">
-        <div class="row justify-content-center">
-         <div class="col-lg-6 col-12" style="display: flex;
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-12" style="display: flex;
          justify-content: center;
          align-items: center;">
-             <div>
+          <div>
             <div class="box-cont" style="padding: 1em;position: relative;">
-                {% load static %}
-                <img   class="img-fluid " src="{% static 'images/cont.png' %}" alt="">
-                <div class="cont-abs" style="position: absolute;
+              {% load static %}
+              <img class="img-fluid " src="{% static 'images/cont.png' %}" alt="">
+              <div class="cont-abs" style="position: absolute;
                 top: 5em;color:#23164B;left: 0;">
-                <h4  style="
+                <h4 style="
               
                 width: 100%;
                
-                text-align: center;">Контакты</h4>
-     
+                text-align: center;">Contact Us</h4>
+
                 <h5 class="text-center" style=" 
            
                 width: 100%;
             
                 text-align: center;">
-                 <a  href="tel:+77077678676" class="text-flicker" style="text-decoration: none; color: #23164B;"
-                 >
-                 {% load static %}
-                 <img class="img-fluid" src="{% static 'images/phone.png' %}" alt=""> +7 707 767 86 76
-                 </a>
+                  <a href="tel:+77077678676" class="text-flicker" style="text-decoration: none; color: #23164B;">
+                    {% load static %}
+                    <img class="img-fluid" src="{% static 'images/phone.png' %}" alt=""> +971 58 527 27 09
+                  </a>
                 </h5>
-               
-                <p class="text-center otv" >
-                    Мы быстро ответим на все вопросы по телефону или WhatsApp
+
+                <p class="text-center otv">
+                  If you have any questions or concerns,
+                  please don't hesitate to reach out by
+                  phone or Whatsapp and we'll do our
+                  best to get back to you as quickly as
+                  possible. Thanks for choosing us!
                 </p>
                 <p style=" 
  
@@ -798,38 +906,34 @@ homepage
                 width: 100%;
               
                 text-align: center;">
-                <a style="text-decoration: none" href="https://wa.me/77077678676/" target="blank">
+                  <a style="text-decoration: none" href="https://wa.me/971585272709/" target="blank">
                     <button class="btn" style="background-color: #23164B;color: white;">
-                        <img class="img-fluid" src="{% static 'images/wath.png' %}" alt="">
-                        <span style="font-size:.7em">Написать нам в WhatsApp</span>
-                        
+                      <img class="img-fluid" src="{% static 'images/wath.png' %}" alt="">
+                      <span style="font-size:.7em">WhatsApp Us </span>
+
                     </button>
-                </a>
+                  </a>
                 </p>
                 <p style=" 
                 font-size: .8em;
                 width: 100%;
               
                 text-align: center;">
- {% load static %}
- <img class="img-fluid" src="{% static 'images/geo.png' %}" alt="">
- <span> Казахстан, г. Алматы</span>
+                  {% load static %}
+                  <img class="img-fluid" src="{% static 'images/geo.png' %}" alt="">
+                  <span> Казахстан, г. Алматы</span>
                 </p>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
-         </div>
-         <div class="col-lg-6 col-12">
-            <iframe
+        <div class="col-lg-6 col-12">
+          <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.1632571444343!2d76.94312591578596!3d43.26895547913633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f581bba36cb%3A0x6c74ca5e0538685f!2z0L_RgC3Rgi4g0J3QsNC30LDRgNCx0LDQtdCy0LAgMzYsINCQ0LvQvNCw0YLRiyAwNTAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sru!4v1632245723485!5m2!1sru!2sru"
-             width="100%"
-             height="620"
-             style="border:0;"
-             allowfullscreen=""
-             loading="lazy">
-             </iframe>
-         </div>
+            width="100%" height="620" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
         </div>
-</section>
+      </div>
+  </section>
 </main>
 {% endblock %}
