@@ -1,2 +1,0 @@
-ssh root@176.97.67.20
-8QYMMMntH6
