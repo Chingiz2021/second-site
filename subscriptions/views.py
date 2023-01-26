@@ -72,7 +72,8 @@ def create_orders(request):
                 type = data['type'],
                 ipuser = str(ip)
                 )
-        send_admin_email_order(data['name'], data['phone'], data['adress'], data['type'])
+  
+        threading.Thread(target=send_admin_email_order, args=(data['name'], data['phone'], data['adress'], data['type'])).start()
         return JsonResponse({'message': True})
 
 
@@ -130,8 +131,8 @@ def create_commands(request):
                 message_text = data['message_text'],
                 phone = data['phone']
                 )
-        send_admin_email_commands2(data['name_user'], data['phone'], data['message_text'])
-   
+       
+        threading.Thread(target=send_admin_email_commands2, args=(data['name_user'], data['phone'], data['message_text'])).start()
         return JsonResponse({'message': True})
 
 def home_page(request):
