@@ -380,7 +380,7 @@ form2.onsubmit = async function(e) {
  mess.classList.remove('mess2')
   }, 2000);
  
- fetch('https://unwanted.ae/orders/', {
+ fetch('/orders/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -425,7 +425,7 @@ form3.onsubmit = async function(e) {
  setTimeout(() => {
   succes.classList.remove('sorm2')
  }, 2000);
-   fetch('https://unwanted.ae/sotrudnichestvo', {
+   fetch('/sotrudnichestvo', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -500,7 +500,7 @@ form5.onsubmit = async function(e) {
   mess.value = ''
 succes.classList.remove('succes-als')
  }, 2000);
- fetch('https://unwanted.ae/comment_create', {
+ fetch('/comment_create', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -535,7 +535,7 @@ form6.onsubmit = async function(e) {
   phone.value = ''
 succes.classList.remove('succes-als')
  }, 2000);
- fetch('https://unwanted.ae/create_commands', {
+ fetch('/create_commands', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'

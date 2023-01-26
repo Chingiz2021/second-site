@@ -4,6 +4,7 @@ import json
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import threading
 from django.core.exceptions import ObjectDoesNotExist
 from dotenv import load_dotenv
 from datetime import datetime
@@ -102,7 +103,8 @@ def create_orders_sotrud(request):
                 email = data['email'],
                 message = message ,
                 )
-        send_admin_email_sotrud(data['name'], data['phone'], data['email'], message)
+        
+        threading.Thread(target=send_admin_email_sotrud, args=((data['name'], data['phone'], data['email'], message))).start()
 
         
         return JsonResponse({'message': True})
