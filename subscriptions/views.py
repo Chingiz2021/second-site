@@ -44,7 +44,7 @@ def send_message_mail(email,message):
     mail = smtplib.SMTP('smtp.mail.ru', 587)
     mail.ehlo()
     mail.starttls()
-    mail.login('info@unwanted.ae', '4UaRPPu(pgj9')
+    mail.login('info@unwanted.ae', 'AT8vcbMSdn3idjtJ2bNd')
     mail.sendmail('info@unwanted.ae', email, msg.as_string())
     mail.quit()
 def get_client_ip(request):
@@ -62,22 +62,21 @@ def create_orders(request):
         ip = get_client_ip(request)
         req_ip = Orders.objects.filter(ipuser = str(ip)).first()
         
-        if not req_ip:
-            order = Orders.objects.create(
-                    name = data['name'],
-                    phone = data['phone'],
-                    adress = data['adress'],
-                    type = data['type'],
-                    ipuser = str(ip)
-                    )
-            html_admin = send_admin_email(data['name'], data['phone'], data['adress'], data['type'])
+     
+        order = Orders.objects.create(
+                name = data['name'],
+                phone = data['phone'],
+                adress = data['adress'],
+                type = data['type'],
+                ipuser = str(ip)
+                )
+        html_admin = send_admin_email(data['name'], data['phone'], data['adress'], data['type'])
             # html_client = send_client_email(data['name'], data['phone'], data['email'])
-            ## send_message_mail(data['email'],html_client)
-            send_message_mail('info@unwanted.ae',html_admin) 
-            send_message_mail('info@unwanted.ae',html_admin)
-            return JsonResponse({'message': True})
-        else:
-            return JsonResponse({'message': False})
+            # send_message_mail(data['email'],html_client)
+            # send_message_mail('info@unwanted.ae',html_admin) 
+        send_message_mail('info@unwanted.ae',html_admin)
+        return JsonResponse({'message': True})
+
 
 
 
@@ -109,7 +108,7 @@ def create_orders_sotrud(request):
         html_admin = send_admin_email_sotr(data['name'], data['phone'], data['email'], message)
         html_client = send_client_email(data['name'], data['phone'], data['email'])
         send_message_mail(data['email'],html_client)
-        send_message_mail('second@unwanted.ae',html_admin)
+        send_message_mail('info@unwanted.ae',html_admin)
         
         return JsonResponse({'message': True})
 
