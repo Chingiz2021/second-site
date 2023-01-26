@@ -30,16 +30,16 @@ services:
       - ./static:/app/second/static
 
 
-  nginx:
-    image: nginx:1.21
-    restart: unless-stopped
-    volumes:
-      - ./dev/nginx:/etc/nginx/conf.d
-      - ./static:/app/second/static
-      - ./media:/app/second/media
-    depends_on:
-      - appdjango
-    ports:
+  # nginx:
+  #   image: nginx:1.21
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ./dev/nginx:/etc/nginx/conf.d
+  #     - ./static:/app/second/static
+  #     - ./media:/app/second/media
+  #   depends_on:
+  #     - appdjango
+  #   ports:
      
     
-      - "8000:8000"
+  #     - "8000:8000"
