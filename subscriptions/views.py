@@ -55,6 +55,7 @@ def get_client_ip(request):
         ip = request.META.get('REMOTE_ADDR')
     return ip
 
+from .services import send_admin_email_order
 @csrf_exempt 
 def create_orders(request):
     if request.method == 'POST':
@@ -70,11 +71,7 @@ def create_orders(request):
                 type = data['type'],
                 ipuser = str(ip)
                 )
-        html_admin = send_admin_email(data['name'], data['phone'], data['adress'], data['type'])
-            # html_client = send_client_email(data['name'], data['phone'], data['email'])
-            # send_message_mail(data['email'],html_client)
-            # send_message_mail('info@unwanted.ae',html_admin) 
-        send_message_mail('info@unwanted.ae',html_admin)
+        send_admin_email_order(data['name'], data['phone'], data['adress'], data['type'])
         return JsonResponse({'message': True})
 
 
@@ -90,7 +87,7 @@ def get_price(request):
         return JsonResponse({'message': order.total})
 
 
-
+from .services import send_admin_email_sotrud
 @csrf_exempt 
 def create_orders_sotrud(request):
     if request.method == 'POST':
@@ -105,10 +102,8 @@ def create_orders_sotrud(request):
                 email = data['email'],
                 message = message ,
                 )
-        html_admin = send_admin_email_sotr(data['name'], data['phone'], data['email'], message)
-        html_client = send_client_email(data['name'], data['phone'], data['email'])
-        send_message_mail(data['email'],html_client)
-        send_message_mail('info@unwanted.ae',html_admin)
+        send_admin_email_sotrud(data['name'], data['phone'], data['email'], message)
+
         
         return JsonResponse({'message': True})
 
@@ -123,6 +118,7 @@ def create_comments(request):
         return JsonResponse({'message': True})
 
 
+from .services import send_admin_email_commands2
 @csrf_exempt 
 def create_commands(request):
     if request.method == 'POST':
@@ -132,8 +128,8 @@ def create_commands(request):
                 message_text = data['message_text'],
                 phone = data['phone']
                 )
-        html_admin = send_admin_email_commands(data['name_user'], data['phone'], data['message_text'])
-        send_message_mail('info@unwanted.ae',html_admin)
+        send_admin_email_commands2(data['name_user'], data['phone'], data['message_text'])
+   
         return JsonResponse({'message': True})
 
 def home_page(request):

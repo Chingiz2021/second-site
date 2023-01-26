@@ -118,7 +118,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_HOST_USER = 'info@unwanted.ae'
+EMAIL_HOST_PASSWORD = 'AT8vcbMSdn3idjtJ2bNd'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
