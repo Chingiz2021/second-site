@@ -171,9 +171,9 @@ body {
 }
 .img-h{
     position: absolute;
-    top: 3em;
+    top: -10em;
     width: 30em;
-    right: 0;
+    right: -10em;
 }
 .otv{
      padding-left: 4em;
@@ -414,6 +414,9 @@ body {
         position: absolute;
         top: 6em;
         width: 15em;
+       
+       
+        right: 3em;
         
     }
     .img-h1{
@@ -461,6 +464,9 @@ body {
 
 }
 @media (max-width:600px){
+    .imn{
+        width: 100px;
+    }
     .img-log{
         position: absolute;
         top: 0;
