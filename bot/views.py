@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 # from TelegramBot.settings import TOKEN
 from .models import ChatUser
-TOKEN ='6105342986:AAGvBVv9fnemOxPhMarvIbSZSI--0nYeU1w'
+TOKEN ='5959383988:AAH3Nadk4iRp56DNfOPb7uxJMQ6WZhXOIus'
  
 bot = TeleBot(TOKEN)
  
@@ -56,5 +56,5 @@ def start(message: types.Message):
     bot.send_message(message.chat.id, text=f"ответил, {message.from_user.full_name}, {message.text}", parse_mode='HTML')
 
 
-# Webhook  https://api.telegram.org/bot6105342986:AAGvBVv9fnemOxPhMarvIbSZSI--0nYeU1w/setWebHook?url=https://unwanted.ae/api/bot/
+# Webhook  https://api.telegram.org/bot5959383988:AAH3Nadk4iRp56DNfOPb7uxJMQ6WZhXOIus/setWebHook?url=https://unwanted.ae/api/bot/
 bot.set_webhook(url="https://unwanted.ae/api/bot/" + TOKEN)
