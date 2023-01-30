@@ -75,7 +75,7 @@ def create_orders(request):
                 )
         url = f'https://unwanted.ae/admin/subscriptions/orders/{order.id}/change/'
         send_order_bot(f'Новая заявка {url}')
-        threading.Thread(target=send_admin_email_order, args=(data['name'], data['phone'], data['adress'], data['type'])).start()
+        # threading.Thread(target=send_admin_email_order, args=(data['name'], data['phone'], data['adress'], data['type'])).start()
         return JsonResponse({'message': True})
 
 
@@ -108,7 +108,7 @@ def create_orders_sotrud(request):
                 )
         url = f'https://unwanted.ae/admin/subscriptions/works/{order.id}/change/'
         send_order_bot(f'Новая заявка на сотрудничество {url}')
-        threading.Thread(target=send_admin_email_sotrud, args=((data['name'], data['phone'], data['email'], message))).start()
+        # threading.Thread(target=send_admin_email_sotrud, args=((data['name'], data['phone'], data['email'], message))).start()
 
         
         return JsonResponse({'message': True})
@@ -136,7 +136,7 @@ def create_commands(request):
                 )
         url = f'https://unwanted.ae/admin/subscriptions/commands/{commands.id}/change/'
         send_order_bot(f'Новая заявка (Хочу в команду) {url}')
-        threading.Thread(target=send_admin_email_commands2, args=(data['name_user'], data['phone'], data['message_text'])).start()
+        # threading.Thread(target=send_admin_email_commands2, args=(data['name_user'], data['phone'], data['message_text'])).start()
         return JsonResponse({'message': True})
 
 def home_page(request):
