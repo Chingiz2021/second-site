@@ -39,7 +39,8 @@ def start_message(message):
     keyboard = types.InlineKeyboardMarkup()
     key_begin = types.InlineKeyboardButton(text='🖊️ Начать', callback_data='begin')
     keyboard.add(key_begin)
-    ChatUser.objects.create(chat_id = message.chat.id,full_name = message.from_user.full_name)
+    if not  ChatUser.objects.filter(chat_id = message.chat.id).first():
+        ChatUser.objects.create(chat_id = message.chat.id,full_name = message.from_user.full_name)
     bot.send_message(message.chat.id, text=text, parse_mode='HTML')
  
 @bot.message_handler()
@@ -56,5 +57,5 @@ def start(message: types.Message):
     bot.send_message(message.chat.id, text=f"ответил, {message.from_user.full_name}, {message.text}", parse_mode='HTML')
 
 
-# Webhook  https://api.telegram.org/bot5959383988:AAH3Nadk4iRp56DNfOPb7uxJMQ6WZhXOIus/setWebHook?url=https://unwanted.ae/api/bot/
+# Webhook  https://api.telegram.org/bot5959383988:AAH3Nadk4iRp56DNfOPb7uxJMQ6WZhXOIus/setWebHook?url=https://unwanted.ae/api/bot
 bot.set_webhook(url="https://unwanted.ae/api/bot/" + TOKEN)
