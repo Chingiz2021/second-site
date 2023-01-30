@@ -39,7 +39,11 @@ def start_message(message):
     keyboard = types.InlineKeyboardMarkup()
     key_begin = types.InlineKeyboardButton(text='🖊️ Начать', callback_data='begin')
     keyboard.add(key_begin)
-    if not  ChatUser.objects.filter(chat_id = message.chat.id).first():
+    if ChatUser.objects.filter(chat_id = message.chat.id).first():
+        
+        pass
+    else:
+
         ChatUser.objects.create(chat_id = message.chat.id,full_name = message.from_user.full_name)
     bot.send_message(message.chat.id, text=text, parse_mode='HTML')
  
