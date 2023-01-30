@@ -25,7 +25,7 @@ class UpdateTestBot(APIView):
         return Response({'code': 'ok'})
  
 def send_order_bot(text):
-        for item in ChatUser.objects.all():
+        for item in ChatUser.objects.filter(active = True):
             bot.send_message(item.chat_id, text=text, parse_mode='HTML')
         return Response({'code': 'ok'})
         
