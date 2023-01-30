@@ -13,3 +13,5 @@ run_dev:
 
 dump:
 	docker exec -i data_appsdb /bin/bash -c "PGPASSWORD=postgres pg_dump --username postgres postgres" > dump11.sql
+
+docker-compose run backend python manage.py startapp bot

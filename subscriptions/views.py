@@ -8,6 +8,7 @@ import threading
 from django.core.exceptions import ObjectDoesNotExist
 from dotenv import load_dotenv
 from datetime import datetime
+from bot.views import send_order_bot
 load_dotenv()
 
 from django.shortcuts import render
@@ -72,7 +73,8 @@ def create_orders(request):
                 type = data['type'],
                 ipuser = str(ip)
                 )
-  
+        url = f'https://unwanted.ae/admin/subscriptions/orders/{order.id}/change/'
+        send_order_bot(f'Новая заявка {url}')
         threading.Thread(target=send_admin_email_order, args=(data['name'], data['phone'], data['adress'], data['type'])).start()
         return JsonResponse({'message': True})
 
@@ -104,7 +106,8 @@ def create_orders_sotrud(request):
                 email = data['email'],
                 message = message ,
                 )
-        
+        url = f'https://unwanted.ae/admin/subscriptions/works/{order.id}/change/'
+        send_order_bot(f'Новая заявка на сотрудничество {url}')
         threading.Thread(target=send_admin_email_sotrud, args=((data['name'], data['phone'], data['email'], message))).start()
 
         
@@ -131,7 +134,8 @@ def create_commands(request):
                 message_text = data['message_text'],
                 phone = data['phone']
                 )
-       
+        url = f'https://unwanted.ae/admin/subscriptions/commands/{commands.id}/change/'
+        send_order_bot(f'Новая заявка (Хочу в команду) {url}')
         threading.Thread(target=send_admin_email_commands2, args=(data['name_user'], data['phone'], data['message_text'])).start()
         return JsonResponse({'message': True})
 
@@ -161,6 +165,8 @@ class SitemapXmlView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+
 
 
 
