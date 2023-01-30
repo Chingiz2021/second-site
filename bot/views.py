@@ -39,8 +39,9 @@ def start_message(message):
     keyboard = types.InlineKeyboardMarkup()
     key_begin = types.InlineKeyboardButton(text='🖊️ Начать', callback_data='begin')
     keyboard.add(key_begin)
-    if ChatUser.objects.filter(chat_id = message.chat.id).first():
-        
+    user = ChatUser.objects.filter(full_name = message.from_user.full_name).first()
+    if user :
+
         pass
     else:
 
