@@ -32,7 +32,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'import_export',
     'subscriptions',
-    'bot'
+    'bot',
+    'gtm'
 ]
 APPEND_SLASH=False
 MIDDLEWARE = [
