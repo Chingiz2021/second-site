@@ -5,7 +5,7 @@ homepage
 {% endspaceless %}{% endblock %}
 {% block header %}
 <header id="header" class="d-flex align-items-center justify-content-center">
-  <div class="container d-flex" style="align-items: center;min-height: 80vh;">
+  <div class="container d-flex" style="align-items: center;min-height: 80vh;position: relative;">
     <div class="row">
       <div class="col-12 col-lg-4 order-2 order-lg-1 box-form" style="position: relative;">
         {% load static %}
@@ -136,19 +136,19 @@ homepage
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-8 order-1 order-lg-2">
-        <div class="container left" style="font-weight: 500;position: relative;">
+      <div class="col-12  col-lg-8 order-1 order-lg-2" style="position: relative;">
+        <div class="container  left" style="font-weight: 500;position: relative;">
           {% load static %}
           <img class="img-h img-fluid" src="{% static 'images/h1.png' %}" alt="">
           <h1 class="hh1" style="position: relative;color: #23164b;
-          font-weight: 700;">Free take out service of
-            any unnecessary items
+          font-weight: 700;width: 100%;">Free take out service of <br>
+          any unnecessary items <br>
             you no longer need
           </h1>
           <p class="text-left  doxod">
             Let’s make a difference in the <br>
 
-            world together  by donating 
+            world together  by donating <br>
 
             1/5 of our income to <span style="color: #EB5534;">Charity!</span>
           </p>

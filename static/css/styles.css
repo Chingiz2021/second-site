@@ -3,6 +3,13 @@ body {
     /* grid-template-rows: repeat(2, auto) 1fr auto; */
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    position: relative;
+}
+header{
+   
+}
+.left{
+    padding-left: 5em;
 }
 #sort{
    background: #a9ab49;;
@@ -169,12 +176,15 @@ body {
     margin-top: 92px;
     font-size: 1.5em;
     position: relative;
+    padding-left: 5em;
 }
+
 .img-h{
     position: absolute;
-    top: -7em;
-    width: 30em;
-    right: -10em;
+
+    bottom: -6.9em;
+
+    right: -30em;
 }
 .otv{
      padding-left: 4em;
@@ -295,6 +305,7 @@ body {
 }
 .hh1{
     width: 70%;
+    padding-left: 3em;
     
 }
 .succes-al{
@@ -331,6 +342,22 @@ body {
     margin: 0;
     padding: 0;
     
+}
+@media (max-width:1500px) {
+    .img-h{
+        width: 20em;
+        right: -14em;
+       
+    }
+}
+@media (max-width:1230px) {
+    .img-h{
+        width: 19em;
+        right: -10em;
+        bottom: -8.6em;
+     
+       
+    }
 }
 @media (max-width:1410px) {
     .cards{
@@ -436,13 +463,15 @@ body {
     }
     .doxod{
         color: #23164bbd;
+        padding-left: 0;
         margin-top: 10em;
         font-size: 1.5em;
         position: relative;
     }
     .hh1{
         width: 100%;
-        margin-top: 1em;;
+        margin-top: 1em;
+        padding-left: 0;
     }
     .box-form{
         margin-top: 4em;
