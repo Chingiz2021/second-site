@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'import_export',
     'subscriptions',
     'bot',
-    'gtm'
+   
 ]
 APPEND_SLASH=False
 MIDDLEWARE = [
