@@ -465,7 +465,7 @@ body {
 }
 @media (max-width:600px){
     .imn{
-        width: 100px;
+        width: 40%;
     }
     .img-log{
         position: absolute;

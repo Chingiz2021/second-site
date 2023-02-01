@@ -63,4 +63,4 @@ def start(message: types.Message):
 
 
 # Webhook  https://api.telegram.org/bot5959383988:AAH3Nadk4iRp56DNfOPb7uxJMQ6WZhXOIus/setWebHook?url=https://unwanted.ae/api/bot
-bot.set_webhook(url="https://unwanted.ae/api/bot/" + TOKEN)
+# bot.set_webhook(url="https://unwanted.ae/api/bot/" + TOKEN)
