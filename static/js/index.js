@@ -38,7 +38,7 @@ function onDrugoe(){
   let drugoe = document.querySelector('.drugoe');
   
   if(!drugoe.value){
-    drugoe.value = 'другое'
+    drugoe.value = 'other'
     let mess = document.querySelector('#mess');
     arrpovod.push(drugoe.value)
    
@@ -154,7 +154,7 @@ function onDrugoe5(){
   let drugoe = document.querySelector('.texn');
   
   if(!drugoe.value){
-    drugoe.value = 'Бытовую техника'
+    drugoe.value = 'Home Appliances'
     arrpovod.push(drugoe.value)
   }else{
     
@@ -176,7 +176,7 @@ function onDrugoe6(){
   let drugoe = document.querySelector('.aks');
   
   if(!drugoe.value){
-    drugoe.value = 'Аксессуары'
+    drugoe.value = 'Furniture'
     arrpovod.push(drugoe.value)
   }else{
     
@@ -198,7 +198,7 @@ function onDrugoe7(){
   let drugoe = document.querySelector('.pos');
   
   if(!drugoe.value){
-    drugoe.value = 'Посуда'
+    drugoe.value = 'Dishes'
     arrpovod.push(drugoe.value)
   }else{
     
@@ -220,7 +220,7 @@ function onDrugoe8(){
   let drugoe = document.querySelector('.ob');
   
   if(!drugoe.value){
-    drugoe.value = 'Обувь'
+    drugoe.value = 'Shoes'
     arrpovod.push(drugoe.value)
   }else{
     
@@ -242,7 +242,7 @@ function onDrugoe9(){
   let drugoe = document.querySelector('.od');
   
   if(!drugoe.value){
-    drugoe.value = 'Одежда'
+    drugoe.value = 'Clothes'
     arrpovod.push(drugoe.value)
   }else{
     

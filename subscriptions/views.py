@@ -65,7 +65,7 @@ def create_orders(request):
         ip = get_client_ip(request)
         req_ip = Orders.objects.filter(ipuser = str(ip)).first()
         
-     
+        
         order = Orders.objects.create(
                 name = data['name'],
                 phone = data['phone'],
